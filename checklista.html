@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genomförande-checklistor · Mariaskarta</title>
+  <meta name="description" content="Interaktiva checklistor för rektor, arbetslag och Marias egen rollout-plan. Sparas i webbläsaren.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231B4B7A'/%3E%3Cpath d='M32 6a26 26 0 0 1 22 12L32 32V6z' fill='%234A7C59'/%3E%3Cpath d='M32 32l22-14a26 26 0 0 1 4 14H32z' fill='%23E27D60'/%3E%3Cpath d='M32 32h26a26 26 0 0 1-26 26V32z' fill='%236B4E8C'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__brand">
+      <span class="site-header__brand-mark" aria-hidden="true"></span>
+      Mariaskarta
+    </a>
+    <button class="site-nav__toggle" aria-expanded="false" aria-controls="primary-nav" type="button">Meny</button>
+    <nav class="site-nav" id="primary-nav" aria-label="Huvudnavigation">
+      <a href="karta.html">Karta</a>
+      <a href="berattelse.html">Berättelse</a>
+      <a href="arshjul.html">Årshjul</a>
+      <a href="mallar/index.html">Mallar</a>
+      <a href="verktyg.html">Verktyg</a>
+      <a href="kommunikation.html">Kommunikation</a>
+      <a href="promptar.html">AI</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Hem</a></li>
+        <li aria-current="page">Genomförande-checklistor</li>
+      </ol>
+      <h1>Checklistor — hur du faktiskt rullar ut det.</h1>
+      <p class="page-hero__lead">
+        Tre interaktiva checklistor: en för dig som rektor som tar emot Mariaskarta, en för arbetslagets termincykel, och en för Marias egen rollout-plan på förvaltningen. Bockarna sparas i din webbläsare.
+      </p>
+    </div>
+  </section>
+
+  <div class="purpose-strip">
+    <div class="purpose-strip__inner">
+      <span class="purpose-strip__label">Använd när</span>
+      <p class="purpose-strip__text">… du vill ha en konkret att-göra-lista för det du ska genomföra. Bockarna är privata (sparas lokalt i webbläsaren).</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="checklist-tabs" role="tablist">
+        <button class="checklist-tab is-active" data-target="cl-rektor" type="button" role="tab" aria-selected="true">Som rektor</button>
+        <button class="checklist-tab" data-target="cl-arbetslag" type="button" role="tab" aria-selected="false">Som arbetslag</button>
+        <button class="checklist-tab" data-target="cl-maria" type="button" role="tab" aria-selected="false">Marias rollout-plan</button>
+      </div>
+
+      <div class="checklist-toolbar">
+        <div class="checklist-progress" aria-label="Framstegsmätare">
+          <div class="checklist-progress__fill" id="progress-fill"></div>
+        </div>
+        <span class="checklist-progress-label" id="progress-label">0 av 0 klara</span>
+        <div class="checklist-actions">
+          <button class="btn btn--ghost btn--small" type="button" id="export-btn">Kopiera som text</button>
+          <button class="btn btn--ghost btn--small" type="button" id="reset-btn">Nollställ denna</button>
+        </div>
+      </div>
+
+      <!-- CHECKLIST 1: REKTOR -->
+      <section class="checklist" id="cl-rektor" data-key="rektor">
+        <h3>Som rektor — så tar du Mariaskarta i bruk på din enhet</h3>
+        <p class="checklist__intro">Här är de konkreta stegen för en första termin. Ungefärlig tidsåtgång: 8 veckor.</p>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">Förbered miljön</h4>
+          <div class="checklist__item" data-id="r1">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Läs igenom Mariaskarta — börja med <a href="berattelse.html">berättelsen</a> och fortsätt med <a href="karta.html">processkartan</a>. <small>Räkna med 45 minuter.</small></span>
+          </div>
+          <div class="checklist__item" data-id="r2">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Skriv ut <a href="poster.html">A3-postern</a> och sätt upp den på expeditionen så den syns för medarbetarna.</span>
+          </div>
+          <div class="checklist__item" data-id="r3">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Bjud in arbetslagen till en 30-minuters introduktion av Mariaskarta. <small>Hänvisa dem till sidan <a href="for-arbetslag.html">för arbetslag</a>.</small></span>
+          </div>
+          <div class="checklist__item" data-id="r4">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Säkerställ att alla mallar är utskrivna och finns tillgängliga i pärmen eller i Teams.</span>
+          </div>
+        </div>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">Sätt upp rutinen</h4>
+          <div class="checklist__item" data-id="r5">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Boka in <strong>pedagogiska avstämningar</strong> med varje arbetslag (minst 1 ggr/termin) i din kalender.</span>
+          </div>
+          <div class="checklist__item" data-id="r6">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Etablera när <strong>Kontaktbarometern</strong> fylls i — varje fredag på arbetsplatsträff?</span>
+          </div>
+          <div class="checklist__item" data-id="r7">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Tydliggör hur arbetslaget dokumenterar i SKA. Vilket format? Vart? Hur ofta?</span>
+          </div>
+          <div class="checklist__item" data-id="r8">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Skicka <a href="mallar/pedagogisk-avstamning.html">mallen för pedagogisk avstämning</a> till arbetslagen som förberedelse inför första mötet.</span>
+          </div>
+        </div>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">Möt förvaltningen</h4>
+          <div class="checklist__item" data-id="r9">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Boka in första <strong>NÖHRA-mötet</strong> med biträdande utbildningschef + central specialpedagog.</span>
+          </div>
+          <div class="checklist__item" data-id="r10">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Förbered: <em>vad är ditt önskade läge för terminen?</em> Skriv ner det innan mötet.</span>
+          </div>
+          <div class="checklist__item" data-id="r11">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Identifiera om du behöver initiera <strong>samråd</strong> kring något arbetslag som inte kommit igång.</span>
+          </div>
+        </div>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">Utvärdera och justera</h4>
+          <div class="checklist__item" data-id="r12">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Efter 8 veckor: stäm av med varje arbetslag — vad fungerar, vad behöver justeras?</span>
+          </div>
+          <div class="checklist__item" data-id="r13">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Skriv en kort statusrapport till bitr. utbildningschef inför nästa NÖHRA-möte.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHECKLIST 2: ARBETSLAG -->
+      <section class="checklist" id="cl-arbetslag" data-key="arbetslag" hidden>
+        <h3>Som arbetslag — er terminscykel</h3>
+        <p class="checklist__intro">Den löpande rutinen ert arbetslag följer under en termin. Bocka av när ni gjort det.</p>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">Uppstart (augusti)</h4>
+          <div class="checklist__item" data-id="a1">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Gå igenom <strong>strukturschemat</strong> tillsammans. Vilken stund, vad erbjuds, vem ansvarar?</span>
+          </div>
+          <div class="checklist__item" data-id="a2">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Tydliggör roller vid övergångar (måltider, ute–inne, vila).</span>
+          </div>
+          <div class="checklist__item" data-id="a3">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Sätt upp schemat synligt — på väggen eller på avdelningens digitala anslagstavla.</span>
+          </div>
+          <div class="checklist__item" data-id="a4">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Välj projekt eller tema (gärna kopplat till Före Bornholm).</span>
+          </div>
+        </div>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">Återkommande varje vecka</h4>
+          <div class="checklist__item" data-id="a5">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Fyll i <strong>Kontaktbarometern</strong>. Varje pedagog markerar +, − eller 0 för varje barn.</span>
+          </div>
+          <div class="checklist__item" data-id="a6">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Diskutera resultatet i arbetslaget — vilka barn behöver vi vara extra uppmärksamma på?</span>
+          </div>
+          <div class="checklist__item" data-id="a7">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Planera insatser för barn med − eller 0 nästa vecka. Notera ansvarig pedagog.</span>
+          </div>
+          <div class="checklist__item" data-id="a8">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Dokumentera kort i SKA — vad provade ni, hur gick det?</span>
+          </div>
+        </div>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">Inför pedagogisk avstämning</h4>
+          <div class="checklist__item" data-id="a9">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Välj en stund eller aktivitet att fokusera mötet på (t.ex. lunch eller övergång).</span>
+          </div>
+          <div class="checklist__item" data-id="a10">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Sammanfatta era SKA-anteckningar för den stunden.</span>
+          </div>
+          <div class="checklist__item" data-id="a11">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Förbered: vad fungerar? Vad fungerar inte? Vilka är ni osäkra på?</span>
+          </div>
+          <div class="checklist__item" data-id="a12">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Läs igenom de <a href="verktyg.html">sju frågorna</a> så ni är förberedda.</span>
+          </div>
+        </div>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">Terminsavslut</h4>
+          <div class="checklist__item" data-id="a13">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Utvärdera: vad har strukturen, projekt/tema och Kontaktbarometern gett er?</span>
+          </div>
+          <div class="checklist__item" data-id="a14">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Notera vilka insatser som ska följa med in i nästa termin.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHECKLIST 3: MARIAS ROLLOUT -->
+      <section class="checklist" id="cl-maria" data-key="maria" hidden>
+        <h3>Marias rollout-plan — införa Mariaskarta i hela förvaltningen</h3>
+        <p class="checklist__intro">Steg-för-steg-plan utifrån Kotters åtta steg. T=startdatum när rektorerna får tillgång till Mariaskarta.</p>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">T-12 veckor · Skapa angelägenhet</h4>
+          <div class="checklist__item" data-id="m1">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Läs igenom Lpfö 18 reviderad 2025 — vilka formuleringar om likvärdighet kan citeras?</span>
+          </div>
+          <div class="checklist__item" data-id="m2">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Sammanfatta Eidevalds rapport "Rätt start i livet" till tre punkter.</span>
+          </div>
+          <div class="checklist__item" data-id="m3">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Förbered "varför just nu?"-narrativ till första samordningsmötet.</span>
+          </div>
+        </div>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">T-10 veckor · Bygg koalition</h4>
+          <div class="checklist__item" data-id="m4">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Identifiera 2–3 nyckelrektorer som tidiga ambassadörer.</span>
+          </div>
+          <div class="checklist__item" data-id="m5">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Bjud in central specialpedagog till samtalet — hen ska vara medbärare av processen.</span>
+          </div>
+          <div class="checklist__item" data-id="m6">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Workshop 2 timmar med koalitionen — gå igenom hela Mariaskarta.</span>
+          </div>
+        </div>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">T-8 veckor · Forma och kommunicera visionen</h4>
+          <div class="checklist__item" data-id="m7">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Skriv ut A3-postern och sprid till varje förskoleexpedition.</span>
+          </div>
+          <div class="checklist__item" data-id="m8">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Förbered <a href="presentation.html">presentationsläget</a> för första samordningsmötet.</span>
+          </div>
+          <div class="checklist__item" data-id="m9">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Skicka mailmall till rektorsgruppen — boka in introduktionen.</span>
+          </div>
+        </div>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">T-2 veckor · Möjliggör handling</h4>
+          <div class="checklist__item" data-id="m10">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Säkerställ att alla mallar är tillgängliga digitalt (delas i Teams eller intranät).</span>
+          </div>
+          <div class="checklist__item" data-id="m11">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Bjud in nya rektorer till sidan <a href="for-rektor.html">för rektor</a>.</span>
+          </div>
+          <div class="checklist__item" data-id="m12">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Schemalägg pilot-uppföljning — central specialpedagog tillgänglig för konsultation.</span>
+          </div>
+        </div>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">T+8 veckor · Tidiga framgångar</h4>
+          <div class="checklist__item" data-id="m13">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Be pilotrektorer dela konkreta resultat: hur många barn har flyttats från − till + i Kontaktbarometern?</span>
+          </div>
+          <div class="checklist__item" data-id="m14">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Lyft minst en framgångshistoria på nästa samordningsmöte.</span>
+          </div>
+        </div>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">T+20 veckor · Konsolidera</h4>
+          <div class="checklist__item" data-id="m15">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Genomför heldagsworkshop med rektorsgruppen — utvärdera vad som fungerat.</span>
+          </div>
+          <div class="checklist__item" data-id="m16">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Justera årshjulet utifrån vad ni lärt — uppdatera Mariaskarta-innehållet.</span>
+          </div>
+          <div class="checklist__item" data-id="m17">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Lägg till nästa lager: en av David Edfelts moduler som kollegialt lärande.</span>
+          </div>
+        </div>
+
+        <div class="checklist__section">
+          <h4 class="checklist__section-title">Förankra i kulturen</h4>
+          <div class="checklist__item" data-id="m18">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Skriv in Mariaskarta-processen i förvaltningens systematiska kvalitetsarbete.</span>
+          </div>
+          <div class="checklist__item" data-id="m19">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Introducera Mariaskarta som standard för nya rektorer (del av onboarding).</span>
+          </div>
+          <div class="checklist__item" data-id="m20">
+            <span class="checklist__box" aria-hidden="true"></span>
+            <span class="checklist__label">Koppla aggregerade resultat till Nationellt kvalitetssystem / kvalitetsdialoger.</span>
+          </div>
+        </div>
+      </section>
+
+      <nav class="pager" aria-label="Sidnavigering">
+        <a class="pager__item pager__item--prev" href="for-forvaltning.html">
+          <span class="pager__direction">Föregående</span>
+          <span class="pager__title">För förvaltning</span>
+        </a>
+        <a class="pager__item pager__item--next" href="presentation.html">
+          <span class="pager__direction">Nästa</span>
+          <span class="pager__title">Presentationsläge</span>
+        </a>
+      </nav>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <h4>Mariaskarta</h4>
+      <p>Ett digitalt navigationsverktyg för biträdande förskolechef. <a href="index.html">Tillbaka till start</a>.</p>
+    </div>
+    <div>
+      <h4>Persona-ingångar</h4>
+      <ul>
+        <li><a href="for-rektor.html">För rektor</a></li>
+        <li><a href="for-arbetslag.html">För arbetslag</a></li>
+        <li><a href="for-forvaltning.html">För förvaltning</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Verktyg för rollout</h4>
+      <ul>
+        <li><a href="presentation.html">Presentationsläge</a></li>
+        <li><a href="poster.html">A3-poster</a></li>
+        <li><a href="kommunikation.html">Kommunikationsplan</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  "use strict";
+
+  const STORAGE_PREFIX = "mariaskarta-checklist-";
+
+  // Tabs
+  const tabs = document.querySelectorAll(".checklist-tab");
+  const lists = document.querySelectorAll(".checklist");
+  let activeList = null;
+
+  function showList(id) {
+    tabs.forEach(t => {
+      const active = t.getAttribute("data-target") === id;
+      t.classList.toggle("is-active", active);
+      t.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    lists.forEach(l => {
+      l.hidden = l.id !== id;
+      if (l.id === id) activeList = l;
+    });
+    updateProgress();
+  }
+
+  tabs.forEach(t => t.addEventListener("click", () => showList(t.getAttribute("data-target"))));
+
+  // Load state for each list
+  lists.forEach(list => {
+    const key = STORAGE_PREFIX + list.getAttribute("data-key");
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(key) || "{}"); } catch(e) {}
+
+    list.querySelectorAll(".checklist__item").forEach(item => {
+      const id = item.getAttribute("data-id");
+      if (saved[id]) item.classList.add("is-checked");
+      item.addEventListener("click", (e) => {
+        if (e.target.tagName === "A") return; // don't toggle when clicking a link
+        item.classList.toggle("is-checked");
+        persist(list);
+        updateProgress();
+      });
+    });
+  });
+
+  function persist(list) {
+    const key = STORAGE_PREFIX + list.getAttribute("data-key");
+    const state = {};
+    list.querySelectorAll(".checklist__item").forEach(item => {
+      state[item.getAttribute("data-id")] = item.classList.contains("is-checked");
+    });
+    try { localStorage.setItem(key, JSON.stringify(state)); } catch(e) {}
+  }
+
+  function updateProgress() {
+    if (!activeList) return;
+    const items = activeList.querySelectorAll(".checklist__item");
+    const checked = activeList.querySelectorAll(".checklist__item.is-checked");
+    const pct = items.length ? Math.round((checked.length / items.length) * 100) : 0;
+    document.getElementById("progress-fill").style.width = pct + "%";
+    document.getElementById("progress-label").textContent =
+      `${checked.length} av ${items.length} klara · ${pct}%`;
+  }
+
+  // Reset
+  document.getElementById("reset-btn").addEventListener("click", () => {
+    if (!activeList) return;
+    if (!confirm("Nollställ alla bockar i denna checklista?")) return;
+    activeList.querySelectorAll(".checklist__item").forEach(i => i.classList.remove("is-checked"));
+    persist(activeList);
+    updateProgress();
+  });
+
+  // Export
+  document.getElementById("export-btn").addEventListener("click", async () => {
+    if (!activeList) return;
+    const title = activeList.querySelector("h3").textContent;
+    const sections = activeList.querySelectorAll(".checklist__section");
+    let lines = [title, "=".repeat(title.length), ""];
+    sections.forEach(sec => {
+      const h = sec.querySelector(".checklist__section-title").textContent;
+      lines.push(h);
+      sec.querySelectorAll(".checklist__item").forEach(item => {
+        const checked = item.classList.contains("is-checked") ? "[x]" : "[ ]";
+        const label = item.querySelector(".checklist__label").innerText.replace(/\s+/g, " ").trim();
+        lines.push(`  ${checked} ${label}`);
+      });
+      lines.push("");
+    });
+    const text = lines.join("\n");
+    const btn = document.getElementById("export-btn");
+    const original = btn.textContent;
+    try {
+      await navigator.clipboard.writeText(text);
+      btn.textContent = "Kopierat!";
+    } catch (e) {
+      // Fallback
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); btn.textContent = "Kopierat!"; }
+      catch(e) { btn.textContent = "Kunde inte kopiera"; }
+      document.body.removeChild(ta);
+    }
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
+
+  // Init
+  activeList = document.getElementById("cl-rektor");
+  updateProgress();
+})();
+</script>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

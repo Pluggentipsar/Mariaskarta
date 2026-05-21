@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A3-poster — Mariaskarta</title>
+  <meta name="description" content="A3-poster för utskrift: aha-bilden, vision och nivåförklaring redo att sättas upp på rektorsexpedition eller i personalrum.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <style>
+    @page { size: A3 portrait; margin: 1.2cm; }
+
+    body.poster {
+      background: #F7F5F0;
+      font-family: "Inter", -apple-system, sans-serif;
+      margin: 0;
+      padding: 1.5rem;
+    }
+
+    .poster-sheet {
+      max-width: 29.7cm;   /* A3 width */
+      min-height: 42cm;    /* A3 height */
+      margin: 0 auto;
+      background: #FFFFFF;
+      padding: 2.4cm 2.2cm;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8cm;
+      position: relative;
+    }
+
+    .poster-header {
+      text-align: center;
+      border-bottom: 2px solid #1B4B7A;
+      padding-bottom: 1cm;
+    }
+
+    .poster-kicker {
+      font-size: 12pt;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #E27D60;
+      font-weight: 700;
+      margin: 0 0 0.4em;
+    }
+
+    .poster-title {
+      font-size: 32pt;
+      font-weight: 800;
+      color: #133657;
+      margin: 0;
+      letter-spacing: -0.01em;
+      line-height: 1.05;
+    }
+
+    .poster-vision {
+      font-family: "Source Serif Pro", Georgia, serif;
+      font-style: italic;
+      font-size: 20pt;
+      color: #1B4B7A;
+      text-align: center;
+      margin: 0.4cm 0 0;
+      line-height: 1.3;
+    }
+
+    .poster-vision::before, .poster-vision::after {
+      content: "\201D";
+      font-size: 1.2em;
+      color: #E27D60;
+      vertical-align: -0.05em;
+    }
+
+    .poster-aha {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      margin: 0.3cm 0;
+    }
+
+    .poster-aha svg {
+      width: 100%;
+      max-width: 22cm;
+      height: auto;
+    }
+
+    .poster-levels {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5cm;
+      margin-top: 0.4cm;
+    }
+
+    .poster-level {
+      padding: 0.5cm 0.5cm 0.55cm;
+      border-radius: 8px;
+      color: #FFFFFF;
+    }
+
+    .poster-level.lv-1 { background: #1B4B7A; }
+    .poster-level.lv-2 { background: #4A7C59; }
+    .poster-level.lv-3 { background: #E27D60; }
+    .poster-level.lv-4 { background: #6B4E8C; }
+
+    .poster-level__num {
+      font-size: 9pt;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      font-weight: 600;
+      margin: 0 0 0.15em;
+    }
+
+    .poster-level__title {
+      font-size: 14pt;
+      font-weight: 700;
+      margin: 0 0 0.3em;
+      line-height: 1.15;
+    }
+
+    .poster-level__desc {
+      font-size: 9.5pt;
+      line-height: 1.35;
+      margin: 0;
+      opacity: 0.95;
+    }
+
+    .poster-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #D9D3C6;
+      padding-top: 0.7cm;
+      font-size: 9.5pt;
+      color: #5A6072;
+    }
+
+    .poster-footer__brand {
+      font-weight: 700;
+      color: #1B4B7A;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 10pt;
+    }
+
+    .poster-footer__hint {
+      font-size: 9pt;
+      color: #5A6072;
+    }
+
+    /* Re-style the embedded aha SVG to fit poster */
+    .poster-sheet .aha-svg .ring-1 { fill-opacity: 0.16; }
+    .poster-sheet .aha-svg .ring-2 { fill-opacity: 0.14; }
+    .poster-sheet .aha-svg .ring-3 { fill-opacity: 0.10; }
+
+    .print-actions {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 100;
+    }
+
+    .print-actions .btn {
+      background: #1B4B7A;
+      color: #FFFFFF;
+      border: none;
+      padding: 0.6em 1.2em;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-family: inherit;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+    }
+
+    .print-actions .btn--ghost {
+      background: #FFFFFF;
+      color: #1B4B7A;
+      border: 1px solid #D9D3C6;
+    }
+
+    .print-actions .btn:hover { background: #133657; color: #FFFFFF; }
+    .print-actions .btn--ghost:hover { background: #F7F5F0; }
+
+    @media print {
+      body.poster { background: #FFFFFF; padding: 0; }
+      .poster-sheet {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        min-height: auto;
+        border-radius: 0;
+      }
+      .print-actions { display: none !important; }
+      .poster-level {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .poster-sheet { padding: 1cm; min-height: auto; }
+      .poster-title { font-size: 24pt; }
+      .poster-vision { font-size: 16pt; }
+      .poster-levels { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body class="poster">
+
+<div class="print-actions">
+  <a class="btn btn--ghost" href="index.html">← Tillbaka</a>
+  <button class="btn" type="button" onclick="window.print()">Skriv ut A3</button>
+</div>
+
+<article class="poster-sheet" aria-label="Mariaskarta A3-poster">
+
+  <header class="poster-header">
+    <p class="poster-kicker">Förskolan · Likvärdig och inkluderande utbildning</p>
+    <h1 class="poster-title">Mariaskarta</h1>
+    <p class="poster-vision">Alla barn ska känna tilltro till sin förmåga som en lärande individ.</p>
+  </header>
+
+  <div class="poster-aha">
+    <svg class="aha-svg" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg"
+         role="img" aria-label="Koncentriskt diagram med barnet i centrum, omgiven av arbetslaget, specialpedagog och rektor, förvaltning, och året som en yttre rytm">
+      <defs>
+        <path id="year-curve" d="M 400 50 A 350 350 0 1 1 399 50"/>
+        <marker id="arrow-in" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <polygon points="0 0, 7 3, 0 6" fill="#1B4B7A" opacity="0.4"/>
+        </marker>
+      </defs>
+
+      <circle class="ring-3" cx="400" cy="400" r="350"/>
+      <text x="400" y="92" class="ring-label" fill="#6B4E8C" text-anchor="middle">FÖRVALTNING</text>
+      <text x="400" y="112" class="ring-tools" text-anchor="middle">Coachande NÖHRA-samtal · samråd · centrala stödfunktioner</text>
+
+      <circle class="ring-2" cx="400" cy="400" r="270"/>
+      <text x="400" y="160" class="ring-label" fill="#E27D60" text-anchor="middle">SPECIALPEDAGOG &amp; REKTOR</text>
+      <text x="400" y="180" class="ring-tools" text-anchor="middle">Pedagogisk avstämning · Isbergsmodellen · 7 frågorna</text>
+
+      <circle class="ring-1" cx="400" cy="400" r="195"/>
+      <text x="400" y="232" class="ring-label" fill="#4A7C59" text-anchor="middle">ARBETSLAG</text>
+      <text x="400" y="250" class="ring-tools" text-anchor="middle">Strukturschema · Kontaktbarometern · SKA</text>
+
+      <circle class="ring-center" cx="400" cy="400" r="120"/>
+      <text x="400" y="375" class="child">BARNET &amp;</text>
+      <text x="400" y="400" class="child">BARNGRUPPEN</text>
+      <text x="400" y="425" class="child-sub">utgångspunkten</text>
+      <text x="400" y="455" class="vision-text">"Alla barn ska känna</text>
+      <text x="400" y="475" class="vision-text">tilltro till sin förmåga"</text>
+
+      <g stroke="#1B4B7A" stroke-width="1.5" fill="none" opacity="0.4">
+        <line x1="170" y1="400" x2="225" y2="400" marker-end="url(#arrow-in)"/>
+        <line x1="630" y1="400" x2="575" y2="400" marker-end="url(#arrow-in)"/>
+        <line x1="400" y1="170" x2="400" y2="225" marker-end="url(#arrow-in)"/>
+        <line x1="400" y1="630" x2="400" y2="575" marker-end="url(#arrow-in)"/>
+      </g>
+
+      <text class="year-label">
+        <textPath href="#year-curve" startOffset="2%">
+          MAJ · JUN · JUL · AUG · SEP · OKT · NOV · DEC · JAN · FEB · MAR · APR · MAJ · JUN · JUL · AUG · SEP · OKT · NOV · DEC · JAN · FEB · MAR · APR
+        </textPath>
+      </text>
+    </svg>
+  </div>
+
+  <div class="poster-levels">
+    <div class="poster-level lv-1">
+      <p class="poster-level__num">Nivå 1</p>
+      <p class="poster-level__title">Barnet</p>
+      <p class="poster-level__desc">Tillgänglig lärmiljö. De sju frågorna i varje stund. Utgångspunkten — allt annat finns för barnets skull.</p>
+    </div>
+    <div class="poster-level lv-2">
+      <p class="poster-level__num">Nivå 2</p>
+      <p class="poster-level__title">Arbetslaget</p>
+      <p class="poster-level__desc">Planerar undervisningen. Kontaktbarometern varje vecka. SKA-dokumentation kontinuerligt.</p>
+    </div>
+    <div class="poster-level lv-3">
+      <p class="poster-level__num">Nivå 3</p>
+      <p class="poster-level__title">Specialpedagog &amp; rektor</p>
+      <p class="poster-level__desc">Pedagogisk avstämning med arbetslaget. Isbergsmodellen vid behov. Utgår från SKA.</p>
+    </div>
+    <div class="poster-level lv-4">
+      <p class="poster-level__num">Nivå 4</p>
+      <p class="poster-level__title">Förvaltning</p>
+      <p class="poster-level__desc">Coachande NÖHRA-samtal 2 ggr/termin. Samråd vid behov. Främjande och förebyggande.</p>
+    </div>
+  </div>
+
+  <footer class="poster-footer">
+    <span class="poster-footer__brand">Mariaskarta</span>
+    <span class="poster-footer__hint">Hela processen + årshjul + mallar finns på den digitala sajten.</span>
+  </footer>
+
+</article>
+
+</body>
+</html>

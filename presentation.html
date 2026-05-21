@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Presentation · Mariaskarta</title>
+  <meta name="description" content="Presentationsläge för Mariaskarta — slides för rektorsmöte eller samordningsmöte. Tangentbordsnavigering, helskärm, talarstöd.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231B4B7A'/%3E%3Cpath d='M32 6a26 26 0 0 1 22 12L32 32V6z' fill='%234A7C59'/%3E%3Cpath d='M32 32l22-14a26 26 0 0 1 4 14H32z' fill='%23E27D60'/%3E%3Cpath d='M32 32h26a26 26 0 0 1-26 26V32z' fill='%236B4E8C'/%3E%3C/svg%3E">
+</head>
+<body class="is-presentation">
+
+<a class="deck-exit" href="index.html">Avsluta</a>
+<div class="deck-dots" id="deck-dots" aria-hidden="true"></div>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1: TITLE -->
+  <section class="slide is-center is-active" data-notes="Hälsa välkommen. Säg: 'Idag ska vi gå igenom Mariaskarta — en gemensam karta för hur vi stöttar arbetslag i förskolan på alla nivåer i styrkedjan. Tar ca 30 minuter, sedan diskuterar vi.' Kom ihåg att andas mellan slides.">
+    <p class="slide__eyebrow">Förskolan · Likvärdig och inkluderande utbildning</p>
+    <h1>Mariaskarta</h1>
+    <p class="slide__lead slide__lead--wide">En tydlig karta för stöd till arbetslag — från barngrupp till huvudman.</p>
+    <p class="slide__vision">"Alla barn ska känna tilltro till sin förmåga som en lärande individ."</p>
+  </section>
+
+  <!-- SLIDE 2: AHA-BILDEN -->
+  <section class="slide is-center" data-notes="Detta är hela processen på en bild. Barnet i centrum. Arbetslaget runt omkring. Specialpedagog och rektor i tredje ringen. Förvaltningen ytterst. Året som rytm runt allt. Säg: 'Den yttre ringen finns för att den innanför ska kunna göra sitt jobb. Stöd rör sig inåt, information utåt.' Pausa här. Låt bilden tala.">
+    <p class="slide__eyebrow">Hela processen — en bild</p>
+    <h2 style="font-size: clamp(1.4rem, 3vw, 2.4rem); margin-bottom: 0.4em;">Barnet i centrum. Året som rytm.</h2>
+    <div style="display: flex; justify-content: center; align-items: center; flex: 1; max-height: 70vh;">
+      <svg class="aha-svg" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" style="max-width: 70vh; width: 100%; height: auto;">
+        <defs>
+          <path id="year-curve" d="M 400 50 A 350 350 0 1 1 399 50"/>
+          <marker id="arrow-in" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <polygon points="0 0, 7 3, 0 6" fill="#FFFFFF" opacity="0.5"/>
+          </marker>
+        </defs>
+        <circle class="ring-3" cx="400" cy="400" r="350"/>
+        <text x="400" y="92" class="ring-label" fill="#6B4E8C" text-anchor="middle">FÖRVALTNING</text>
+        <text x="400" y="112" class="ring-tools" text-anchor="middle">Coachande NÖHRA-samtal · samråd · centrala stödfunktioner</text>
+        <circle class="ring-2" cx="400" cy="400" r="270"/>
+        <text x="400" y="160" class="ring-label" fill="#E27D60" text-anchor="middle">SPECIALPEDAGOG &amp; REKTOR</text>
+        <text x="400" y="180" class="ring-tools" text-anchor="middle">Pedagogisk avstämning · Isbergsmodellen · 7 frågorna</text>
+        <circle class="ring-1" cx="400" cy="400" r="195"/>
+        <text x="400" y="232" class="ring-label" fill="#4A7C59" text-anchor="middle">ARBETSLAG</text>
+        <text x="400" y="250" class="ring-tools" text-anchor="middle">Strukturschema · Kontaktbarometern · SKA</text>
+        <circle class="ring-center" cx="400" cy="400" r="120"/>
+        <text x="400" y="375" class="child" fill="#1B4B7A">BARNET &amp;</text>
+        <text x="400" y="400" class="child" fill="#1B4B7A">BARNGRUPPEN</text>
+        <text x="400" y="425" class="child-sub">utgångspunkten</text>
+        <text x="400" y="455" class="vision-text" fill="#1B4B7A">"Alla barn ska känna</text>
+        <text x="400" y="475" class="vision-text" fill="#1B4B7A">tilltro till sin förmåga"</text>
+        <g stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.5">
+          <line x1="170" y1="400" x2="225" y2="400" marker-end="url(#arrow-in)"/>
+          <line x1="630" y1="400" x2="575" y2="400" marker-end="url(#arrow-in)"/>
+          <line x1="400" y1="170" x2="400" y2="225" marker-end="url(#arrow-in)"/>
+          <line x1="400" y1="630" x2="400" y2="575" marker-end="url(#arrow-in)"/>
+        </g>
+        <text class="year-label">
+          <textPath href="#year-curve" startOffset="2%">
+            MAJ · JUN · JUL · AUG · SEP · OKT · NOV · DEC · JAN · FEB · MAR · APR · MAJ · JUN · JUL · AUG · SEP · OKT · NOV · DEC · JAN · FEB · MAR · APR
+          </textPath>
+        </text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: STYRKEDJAN -->
+  <section class="slide" data-notes="Här bryter vi ner i fyra nivåer. Säg: 'Vi börjar med barnet — utgångspunkten. Arbetslaget möter barnet varje dag och har sina verktyg. Specialpedagog och rektor stämmer av. Förvaltningen stöttar med främjande insatser.' Betona att det INTE är hierarki uppifrån-ner — varje yttre ring stöder den innanför.">
+    <p class="slide__eyebrow">Fyra nivåer i styrkedjan</p>
+    <h2>Stöd som breder ut sig — varje nivå möjliggör den innanför.</h2>
+    <div class="slide-items">
+      <div class="slide-item">
+        <span class="slide-item__num" style="background: rgba(27, 75, 122, 0.3); color: #6FA0CC;">1</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Barnet &amp; barngruppen</h3>
+          <p class="slide-item__text">Tillgänglig lärmiljö. De sju frågorna i varje stund. Utgångspunkten.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num" style="background: rgba(74, 124, 89, 0.3); color: #8FBA98;">2</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Arbetslaget</h3>
+          <p class="slide-item__text">Strukturschema, Kontaktbarometer, SKA-dokumentation. Möter barnen varje dag.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num" style="background: rgba(226, 125, 96, 0.3); color: #F0A48B;">3</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Specialpedagog &amp; rektor</h3>
+          <p class="slide-item__text">Pedagogisk avstämning utgår från SKA. Isbergsmodellen vid behov.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num" style="background: rgba(107, 78, 140, 0.3); color: #A88BC6;">4</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Förvaltning</h3>
+          <p class="slide-item__text">NÖHRA-samtal med rektor 2 ggr/termin. Samråd och insats vid behov.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: BERÄTTELSE -->
+  <section class="slide" data-notes="Här konkretiserar vi processen genom en historia. Säg: 'Möt arbetslaget på Solrosen. Adam är 4 år, har svårt med övergångar. I september märker arbetslaget i Kontaktbarometern att Adam får minus och nollor. Då tar processen vid.' Berätta som en story — använd namn, var konkret. Slutet är poängen: Adam ropar 'var ska jag sitta?' — han VET att det finns ett svar.">
+    <p class="slide__eyebrow">Berättelsen — Solrosen</p>
+    <h2>När processen rör sig i ett konkret år.</h2>
+    <div class="slide-items" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div class="slide-item">
+        <span class="slide-item__num">Sep</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Kontaktbarometern visar mönster</h3>
+          <p class="slide-item__text">Adam får minus och nollor. Arbetslaget skriver i SKA.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num">Okt</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Pedagogisk avstämning</h3>
+          <p class="slide-item__text">Specialpedagog kallar. De sju frågorna ställs på lunchstunden.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num">Nov</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Isbergsmodellen</h3>
+          <p class="slide-item__text">Ovanför ytan: vägrar sätta sig. Under ytan: vet inte vem han ska sitta med.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num">Dec</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Insats: lunchstruktur</h3>
+          <p class="slide-item__text">Fasta lunchgrupper. Adam vet vem han sitter med. Skrivs i SKA.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num">Feb</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Kontaktbarometern visar förändring</h3>
+          <p class="slide-item__text">Adam har gått från minus/nollor till plus från alla pedagoger.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num">Apr</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">"Khaled, var ska jag sitta?"</h3>
+          <p class="slide-item__text">Adam har språket. Han vet att det finns ett svar. Vision uppnådd.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: ÅRSHJULET -->
+  <section class="slide" data-notes="Säg: 'Detta är årshjulet. Strukturschema planeras i maj. Kontaktbarometern återkommer i sep, nov, feb, april. Pedagogisk avstämning sker när arbetslaget behöver det — minst en gång per termin. NÖHRA-samtal mellan rektor och förvaltning 2 ggr/termin.' Pek på dem som är där just nu i året.">
+    <p class="slide__eyebrow">Året som rytm</p>
+    <h2>Återkommande rytmer som bär processen.</h2>
+    <div class="slide-items">
+      <div class="slide-item">
+        <span class="slide-item__num" style="background: rgba(242, 177, 52, 0.25); color: #F2B134;">📅</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Maj &amp; Augusti — strukturschemat</h3>
+          <p class="slide-item__text">Planering inför läsåret. Vem ansvarar för vad, vid vilka övergångar.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num" style="background: rgba(226, 125, 96, 0.25); color: #F0A48B;">♻</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Sep · Nov · Feb · Apr — Kontaktbarometern</h3>
+          <p class="slide-item__text">Fyra mätpunkter på året. Resultat kopplas till närvaromönster.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num" style="background: rgba(107, 78, 140, 0.25); color: #A88BC6;">⚖</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Jan — förenklad pedagogisk avstämning</h3>
+          <p class="slide-item__text">Halvtidskoll. Använd Isbergsmodellen vid behov.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num" style="background: rgba(27, 75, 122, 0.25); color: #6FA0CC;">⤳</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Nov &amp; April — utvärdering</h3>
+          <p class="slide-item__text">Termin- och årsutvärdering. Vad behåller vi, vad förändrar vi?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: VERKTYGEN -->
+  <section class="slide" data-notes="Säg: 'Inget av det här är nytt. Vi använder verktyg som redan finns och som funkar. Det nya är att vi använder dem systematiskt på rätt nivå.' Lyft mallarna — de är klara att skriva ut.">
+    <p class="slide__eyebrow">Era verktyg</p>
+    <h2>Inget nytt — bara systematiskt använt.</h2>
+    <div class="slide-items">
+      <div class="slide-item">
+        <span class="slide-item__num">📋</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Kontaktbarometern</h3>
+          <p class="slide-item__text">Veckorutin för arbetslag. Plus, minus eller noll per pedagog × barn.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num">🤝</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Pedagogisk avstämning</h3>
+          <p class="slide-item__text">Mötesprotokoll med de sju frågorna. Tydlig rollfördelning.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num">🧊</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Isbergsmodellen</h3>
+          <p class="slide-item__text">Perspektivskifte: från beteende till behov, känslor, sammanhang.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num">💬</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">NÖHRA-samtal</h3>
+          <p class="slide-item__text">Coachande samtal mellan förvaltning och rektor — eller rektor och arbetslag.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7: KOTTER + ADKAR -->
+  <section class="slide" data-notes="Säg: 'För att detta ska fungera behöver det inte vara mitt projekt — det behöver vara er rutin. Därför kör vi Kotters åtta steg: skapa angelägenhet, bygg koalition, forma och kommunicera vision, möjliggör handling, tidiga framgångar, konsolidera, förankra.' Sedan: 'Och ADKAR — vad varje rektor enskilt behöver för att lyckas.'">
+    <p class="slide__eyebrow">Implementering</p>
+    <h2>Förändring sker inte av sig själv.</h2>
+    <p class="slide__lead slide__lead--wide" style="margin-bottom: 1.5rem;">Vi kör Kotters åtta steg som strategisk grund — och säkrar att varje rektor får alla fem delar av ADKAR-modellen.</p>
+    <div class="slide-items" style="grid-template-columns: 1fr 1fr;">
+      <div class="slide-item">
+        <span class="slide-item__num" style="font-size: 0.8rem;">A</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Awareness</h3>
+          <p class="slide-item__text">Medvetenhet om varför just nu — Lpfö 18 rev 2025, Eidevald.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num" style="font-size: 0.8rem;">D</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Desire</h3>
+          <p class="slide-item__text">Vilja att delta — mindre brandsläckning, fler barn som mår bra.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num" style="font-size: 0.8rem;">K</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Knowledge</h3>
+          <p class="slide-item__text">Kunskap om hur — kartan, verktygen, mallarna.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num" style="font-size: 0.8rem;">A</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Ability</h3>
+          <p class="slide-item__text">Förmåga att tillämpa — stöd från central specialpedagog.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: VAD VI BÖRJAR MED -->
+  <section class="slide is-center" data-notes="Detta är handlingsslidan. Säg: 'Vad ber jag er om idag? Tre saker.' Sedan tystnad. Låt det landa. Avsluta: 'Jag finns för er. Ni kommer få stöd. Det här är inte ert ansvar att lösa själva.'">
+    <p class="slide__eyebrow">Vad rektorerna gör nu</p>
+    <h2>Tre saker att göra senast om två veckor.</h2>
+    <div class="slide-items" style="grid-template-columns: 1fr; max-width: 60ch; margin: 2rem auto 0;">
+      <div class="slide-item">
+        <span class="slide-item__num">1</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Skriv ut A3-postern</h3>
+          <p class="slide-item__text">Sätt upp på din expedition så medarbetarna ser den.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num">2</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Bjud in arbetslagen till en 30-minuters introduktion</h3>
+          <p class="slide-item__text">Hänvisa dem till sidan för arbetslag på Mariaskarta.</p>
+        </div>
+      </div>
+      <div class="slide-item">
+        <span class="slide-item__num">3</span>
+        <div class="slide-item__body">
+          <h3 class="slide-item__title">Boka in första pedagogiska avstämningen</h3>
+          <p class="slide-item__text">Tillsammans med specialpedagog — välj ett arbetslag att börja med.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: AVSLUTNING -->
+  <section class="slide is-center" data-notes="Avslutningsbild. Säg: 'Vision: Alla barn ska känna tilltro till sin förmåga som en lärande individ. Det är därför vi gör det här. Frågor?' Stå kvar i tystnaden.">
+    <p class="slide__eyebrow">Vad allt det här syftar till</p>
+    <p class="slide__vision" style="font-size: clamp(2rem, 4vw, 3.5rem); max-width: 24ch;">Alla barn ska känna tilltro till sin förmåga som en lärande individ.</p>
+    <p class="slide__lead" style="margin-top: 2rem; font-size: clamp(0.95rem, 1.4vw, 1.2rem);">Tack. Frågor?</p>
+  </section>
+
+</div>
+
+<div class="notes" id="notes" aria-live="polite"></div>
+
+<div class="deck-controls" role="group" aria-label="Presentationskontroller">
+  <button id="prev-btn" type="button" aria-label="Föregående">←</button>
+  <span class="deck-counter" id="deck-counter">1 / 9</span>
+  <button id="next-btn" type="button" aria-label="Nästa">→</button>
+  <button id="notes-btn" type="button" aria-label="Visa talarstöd" title="N — visa/dölj talarstöd">N</button>
+  <button id="fs-btn" type="button" aria-label="Helskärm" title="F — helskärm">⛶</button>
+</div>
+
+<script>
+(function() {
+  "use strict";
+
+  const slides = Array.from(document.querySelectorAll(".slide"));
+  const notesEl = document.getElementById("notes");
+  const counterEl = document.getElementById("deck-counter");
+  const dotsEl = document.getElementById("deck-dots");
+  const body = document.body;
+  let idx = 0;
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement("button");
+    dot.className = "deck-dots__dot";
+    dot.type = "button";
+    dot.setAttribute("aria-label", "Slide " + (i + 1));
+    dot.addEventListener("click", () => goTo(i));
+    dotsEl.appendChild(dot);
+  });
+
+  function render() {
+    slides.forEach((s, i) => s.classList.toggle("is-active", i === idx));
+    Array.from(dotsEl.children).forEach((d, i) => d.classList.toggle("is-active", i === idx));
+    counterEl.textContent = (idx + 1) + " / " + slides.length;
+    const notes = slides[idx].getAttribute("data-notes") || "";
+    notesEl.textContent = notes;
+    document.getElementById("prev-btn").disabled = idx === 0;
+    document.getElementById("next-btn").disabled = idx === slides.length - 1;
+    // Update URL hash
+    history.replaceState(null, "", "#" + (idx + 1));
+  }
+
+  function goTo(n) { idx = Math.max(0, Math.min(slides.length - 1, n)); render(); }
+  function next() { goTo(idx + 1); }
+  function prev() { goTo(idx - 1); }
+
+  document.getElementById("prev-btn").addEventListener("click", prev);
+  document.getElementById("next-btn").addEventListener("click", next);
+
+  document.getElementById("notes-btn").addEventListener("click", () => {
+    body.classList.toggle("notes-visible");
+  });
+
+  document.getElementById("fs-btn").addEventListener("click", () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    } else {
+      document.exitFullscreen().catch(() => {});
+    }
+  });
+
+  // Keyboard
+  document.addEventListener("keydown", (e) => {
+    if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+    switch (e.key) {
+      case "ArrowRight":
+      case " ":
+      case "PageDown":
+        e.preventDefault(); next(); break;
+      case "ArrowLeft":
+      case "PageUp":
+        e.preventDefault(); prev(); break;
+      case "Home":
+        e.preventDefault(); goTo(0); break;
+      case "End":
+        e.preventDefault(); goTo(slides.length - 1); break;
+      case "n":
+      case "N":
+        body.classList.toggle("notes-visible"); break;
+      case "f":
+      case "F":
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().catch(() => {});
+        } else {
+          document.exitFullscreen().catch(() => {});
+        }
+        break;
+      case "Escape":
+        if (!document.fullscreenElement) window.location.href = "index.html";
+        break;
+    }
+  });
+
+  // Touch swipe
+  let touchStartX = 0;
+  document.addEventListener("touchstart", (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 60) { dx > 0 ? prev() : next(); }
+  }, { passive: true });
+
+  // Open at hash if present
+  const m = window.location.hash.match(/^#(\d+)$/);
+  if (m) {
+    const n = parseInt(m[1], 10) - 1;
+    if (n >= 0 && n < slides.length) idx = n;
+  }
+
+  render();
+})();
+</script>
+
+</body>
+</html>
