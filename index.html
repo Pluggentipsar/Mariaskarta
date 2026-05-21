@@ -25,12 +25,14 @@
     <button class="site-nav__toggle" aria-expanded="false" aria-controls="primary-nav" type="button">Meny</button>
     <nav class="site-nav" id="primary-nav" aria-label="Huvudnavigation">
       <a href="#oversikt">Översikt</a>
-      <a href="#processkarta">Processkarta</a>
+      <a href="#aha">Helheten</a>
+      <a href="#processkarta">Karta</a>
+      <a href="#berattelse">Berättelse</a>
       <a href="#arshjul">Årshjul</a>
       <a href="#kommunikation">Kommunikation</a>
-      <a href="#verktygslada">Verktygslåda</a>
-      <a href="#promptar">AI-promptar</a>
-      <a href="#kallor">Källor</a>
+      <a href="#verktygslada">Verktyg</a>
+      <a href="mallar/index.html">Mallar</a>
+      <a href="#promptar">Promptar</a>
     </nav>
   </div>
 </header>
@@ -103,6 +105,112 @@
 
       <div class="callout">
         <strong>Den röda tråden:</strong> Insatser som planeras på förvaltningsnivå hamnar tillbaka i arbetslagets SKA — och följs upp i nästa pedagogiska avstämning. Inget faller mellan stolarna.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AHA-BILDEN — hela processen på en sekund
+       ============================================================ -->
+  <section class="section" id="aha">
+    <div class="container">
+      <span class="section__eyebrow">Hela processen — en bild</span>
+      <h2>Barnet i centrum. Stöd som breder ut sig. Året som rytm.</h2>
+      <p class="section__lead">
+        Processen är inte hierarkisk i bemärkelsen "uppifrån och ner". Den är <strong>koncentrisk</strong> — barnet i mitten, och varje yttre ring stöder ringen innanför. Året löper som en bärande rytm runtom det hela.
+      </p>
+
+      <div class="aha-wrap">
+        <svg class="aha-svg" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-label="Koncentriskt diagram med barnet i centrum, omgiven av arbetslaget, specialpedagog och rektor, förvaltning, och året som en yttre rytm">
+          <!-- Yttre årshjuls-båge -->
+          <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+              <polygon points="0 0, 10 3, 0 6" fill="#F2B134"/>
+            </marker>
+            <path id="year-curve" d="M 400 50 A 350 350 0 1 1 399 50"/>
+          </defs>
+
+          <!-- Ring 3: Förvaltning -->
+          <circle class="ring-3" cx="400" cy="400" r="350"/>
+          <text x="400" y="92" class="ring-label" fill="#6B4E8C" text-anchor="middle">FÖRVALTNING</text>
+          <text x="400" y="112" class="ring-tools" text-anchor="middle">Coachande NÖHRA-samtal · samråd · centrala stödfunktioner</text>
+
+          <!-- Ring 2: Specialpedagog / Rektor -->
+          <circle class="ring-2" cx="400" cy="400" r="270"/>
+          <text x="400" y="160" class="ring-label" fill="#E27D60" text-anchor="middle">SPECIALPEDAGOG &amp; REKTOR</text>
+          <text x="400" y="180" class="ring-tools" text-anchor="middle">Pedagogisk avstämning · Isbergsmodellen · 7 frågorna</text>
+
+          <!-- Ring 1: Arbetslag -->
+          <circle class="ring-1" cx="400" cy="400" r="195"/>
+          <text x="400" y="232" class="ring-label" fill="#4A7C59" text-anchor="middle">ARBETSLAG</text>
+          <text x="400" y="250" class="ring-tools" text-anchor="middle">Strukturschema · Kontaktbarometern · SKA</text>
+
+          <!-- Centrum: Barnet -->
+          <circle class="ring-center" cx="400" cy="400" r="120"/>
+          <text x="400" y="375" class="child">BARNET &amp;</text>
+          <text x="400" y="400" class="child">BARNGRUPPEN</text>
+          <text x="400" y="425" class="child-sub">utgångspunkten</text>
+          <text x="400" y="455" class="vision-text">"Alla barn ska känna</text>
+          <text x="400" y="475" class="vision-text">tilltro till sin förmåga"</text>
+
+          <!-- Inåt-pilar (stöd flödar inåt) -->
+          <g stroke="#1B4B7A" stroke-width="1.5" fill="none" opacity="0.4">
+            <line x1="170" y1="400" x2="225" y2="400" marker-end="url(#arrow-in)"/>
+            <line x1="630" y1="400" x2="575" y2="400" marker-end="url(#arrow-in)"/>
+            <line x1="400" y1="170" x2="400" y2="225" marker-end="url(#arrow-in)"/>
+            <line x1="400" y1="630" x2="400" y2="575" marker-end="url(#arrow-in)"/>
+          </g>
+          <defs>
+            <marker id="arrow-in" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <polygon points="0 0, 7 3, 0 6" fill="#1B4B7A" opacity="0.4"/>
+            </marker>
+          </defs>
+
+          <!-- Inåt-text -->
+          <text x="105" y="395" class="ring-tools" text-anchor="middle">stöd</text>
+          <text x="105" y="410" class="ring-tools" text-anchor="middle">inåt</text>
+          <text x="695" y="395" class="ring-tools" text-anchor="middle">stöd</text>
+          <text x="695" y="410" class="ring-tools" text-anchor="middle">inåt</text>
+
+          <!-- Årshjuls-text längs båge -->
+          <text class="year-label">
+            <textPath href="#year-curve" startOffset="2%">
+              MAJ · JUN · JUL · AUG · SEP · OKT · NOV · DEC · JAN · FEB · MAR · APR · MAJ · JUN · JUL · AUG · SEP · OKT · NOV · DEC · JAN · FEB · MAR · APR
+            </textPath>
+          </text>
+        </svg>
+
+        <div class="aha-legend">
+          <div class="aha-legend__item">
+            <strong style="color:#1B4B7A">⬤ Centrum</strong>
+            <span>Barnet och barngruppens behov är utgångspunkten — allt annat finns för deras skull.</span>
+          </div>
+          <div class="aha-legend__item">
+            <strong style="color:#4A7C59">⬤ Arbetslaget</strong>
+            <span>Möter barnen varje dag. Använder strukturschema, Kontaktbarometer, SKA-dokumentation.</span>
+          </div>
+          <div class="aha-legend__item">
+            <strong style="color:#E27D60">⬤ Specialpedagog &amp; rektor</strong>
+            <span>Stämmer av med arbetslaget. Pedagogisk avstämning utgår från SKA + de sju frågorna.</span>
+          </div>
+          <div class="aha-legend__item">
+            <strong style="color:#6B4E8C">⬤ Förvaltningen</strong>
+            <span>Möter rektor främjande och förebyggande. Samråd och insats när det behövs.</span>
+          </div>
+          <div class="aha-legend__item">
+            <strong style="color:#E27D60">⬤ Året</strong>
+            <span>Bär processen genom återkommande månadsaktiviteter — strukturschema, Kontaktbarometer, pedagogisk avstämning.</span>
+          </div>
+          <div class="aha-legend__item">
+            <strong style="color:#1B4B7A">⬤ Flödet</strong>
+            <span>Stöd rör sig inåt, information utåt. Inget barn ska "försvinna", inget arbetslag ska stå ensamt.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:1.5rem">
+        <strong>Hur den ska läsas:</strong> Titta från mitten och ut. Ringarna stöder varandra — den yttre ringen finns för att den innanför ska kunna göra sitt jobb, så att den innanför kan stötta nästa, så att <em>barnet i mitten</em> ska känna tilltro till sin förmåga.
       </div>
     </div>
   </section>
@@ -182,6 +290,17 @@ flowchart TB
   class S1,S2,S3 lv3;
   class F1,F2,F3 lv4;
   class K1 ko;
+
+  click B3 "#nivå-1" "Läs om de sju frågorna"
+  click B2 "#nivå-1" "Tillgänglig lärmiljö"
+  click A2 "mallar/kontaktbarometer.html" "Öppna Kontaktbarometer-mall"
+  click A4 "#nivå-2" "Läs om SKA"
+  click S1 "mallar/pedagogisk-avstamning.html" "Öppna avstämningsprotokoll"
+  click S3 "mallar/isbergsmodellen.html" "Öppna Isbergsmodellen-blankett"
+  click F1 "mallar/nohra-samtal.html" "Öppna NÖHRA-samtalsguide"
+  click F2 "#nivå-4" "Läs om förvaltningens roll"
+  click F3 "#nivå-4" "Läs om samrådsprocessen"
+  click K1 "#verktygslada" "Läs om Edfelts moduler"
         </div>
       </div>
 
@@ -224,6 +343,127 @@ flowchart TB
 
       <div class="callout">
         <strong>Prioriterat mål:</strong> Tillgänglig lärmiljö med tonvikt på <em>pedagogiska relationer</em> (interaktion mellan barn och vuxen). Mäts genom avstämning 2 ggr/år.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BERÄTTELSEN — så hänger allt ihop
+       ============================================================ -->
+  <section class="section section--tinted" id="berattelse">
+    <div class="container">
+      <span class="section__eyebrow">Berättelsen — så hänger allt ihop</span>
+      <h2>Möt arbetslaget på avdelning Solrosen.</h2>
+      <p class="section__lead">
+        Karta och årshjul är abstrakta. Här är samma process gestaltad genom ett fiktivt — men sant gestaltat — exempel: ett arbetslags år, från strukturschema i augusti till utvärdering i april. Följ tidslinjen för att se hur nivåerna i styrkedjan stöder varandra i praktiken.
+      </p>
+
+      <div class="story-protagonist">
+        <strong>Avdelning Solrosen.</strong> Förskola i en mellanstor svensk kommun. Tre pedagoger (Anna, Khaled, Petra), 18 barn 3–5 år. Rektor: Linnea. Specialpedagog: Yasmin. Bitr. utbildningschef: Maria. I gruppen finns Adam (4 år) som har svårt med övergångar.
+      </div>
+
+      <div class="story-wrap">
+        <div class="story-scroll">
+
+          <article class="story-card lv-2">
+            <span class="story-card__month">Augusti</span>
+            <h4 class="story-card__title">Arbetslaget gör strukturschemat</h4>
+            <p class="story-card__text">Anna, Khaled och Petra går igenom dagen stund för stund: vad erbjuds, vem ansvarar, hur stöttar vi vid övergångar. Schemat sätts upp på väggen.</p>
+            <div class="story-card__chips">
+              <span class="story-card__chip">Nivå 2 · Arbetslag</span>
+              <a class="story-card__chip is-link" href="#arshjul">Augusti i hjulet</a>
+            </div>
+          </article>
+
+          <article class="story-card lv-2">
+            <span class="story-card__month">September</span>
+            <h4 class="story-card__title">Kontaktbarometern visar ett mönster</h4>
+            <p class="story-card__text">Pedagogerna fyller i Kontaktbarometern. Adam får minus från Khaled, nollor från Anna och Petra. Närvaromönstret visar att han ofta lämnas tidigt och hämtas sent.</p>
+            <div class="story-card__chips">
+              <span class="story-card__chip">Nivå 2 · Arbetslag</span>
+              <a class="story-card__chip is-link" href="mallar/kontaktbarometer.html">Kontaktbarometer-mall</a>
+            </div>
+          </article>
+
+          <article class="story-card lv-3">
+            <span class="story-card__month">Oktober</span>
+            <h4 class="story-card__title">Pedagogisk avstämning kallas in</h4>
+            <p class="story-card__text">Arbetslaget skriver i SKA: "vi når inte Adam vid lunchen". Specialpedagog Yasmin kallar till pedagogisk avstämning. De utgår från lunchstunden och prövar de sju frågorna.</p>
+            <div class="story-card__chips">
+              <span class="story-card__chip">Nivå 3 · Specialpedagog</span>
+              <a class="story-card__chip is-link" href="mallar/pedagogisk-avstamning.html">Avstämningsprotokoll</a>
+            </div>
+          </article>
+
+          <article class="story-card lv-3">
+            <span class="story-card__month">November</span>
+            <h4 class="story-card__title">Isbergsmodellen — vad behöver Adam?</h4>
+            <p class="story-card__text">Vid avstämningen #2 använder Yasmin och rektor Linnea Isbergsmodellen. Ovanför ytan: Adam vägrar sätta sig. Under ytan: ljudnivån, antalet vuxna, han vet inte vem han ska sitta med.</p>
+            <div class="story-card__chips">
+              <span class="story-card__chip">Nivå 3 · Specialpedagog &amp; rektor</span>
+              <a class="story-card__chip is-link" href="mallar/isbergsmodellen.html">Isbergsmodell-blankett</a>
+            </div>
+          </article>
+
+          <article class="story-card lv-2">
+            <span class="story-card__month">December</span>
+            <h4 class="story-card__title">Insatsen påbörjas</h4>
+            <p class="story-card__text">Arbetslaget delar in barnen i tre fasta lunchgrupper. Adam vet vem han sitter med och vem som hjälper. Strukturschemat justeras. Skrivs in i SKA som "lunchstrukturen — pilot".</p>
+            <div class="story-card__chips">
+              <span class="story-card__chip">Nivå 2 · Arbetslag</span>
+              <span class="story-card__chip">SKA-dokumentation</span>
+            </div>
+          </article>
+
+          <article class="story-card lv-3">
+            <span class="story-card__month">Januari</span>
+            <h4 class="story-card__title">Förenklad pedagogisk avstämning</h4>
+            <p class="story-card__text">Arbetslag + Yasmin stämmer av i 30 minuter. Lunchen fungerar för Adam. Nu provar de samma struktur vid påklädning. Sju frågorna ställs igen.</p>
+            <div class="story-card__chips">
+              <span class="story-card__chip">Nivå 3 · Specialpedagog</span>
+              <a class="story-card__chip is-link" href="#arshjul">Januari i hjulet</a>
+            </div>
+          </article>
+
+          <article class="story-card lv-2">
+            <span class="story-card__month">Februari</span>
+            <h4 class="story-card__title">Kontaktbarometern visar förändring</h4>
+            <p class="story-card__text">Adam har gått från minus/nollor till plus från alla tre pedagoger. Två andra barn med liknande mönster är nu i fokus. Insatsen "lunchstrukturen" lyfts till nästa nivå.</p>
+            <div class="story-card__chips">
+              <span class="story-card__chip">Nivå 2 · Arbetslag</span>
+              <a class="story-card__chip is-link" href="mallar/kontaktbarometer.html">Kontaktbarometer-mall</a>
+            </div>
+          </article>
+
+          <article class="story-card lv-4">
+            <span class="story-card__month">Mars</span>
+            <h4 class="story-card__title">NÖHRA-samtal med förvaltningen</h4>
+            <p class="story-card__text">Bitr. utbildningschef Maria och central specialpedagog möter rektor Linnea. NÖHRA: hur sprider vi lärdomen från Solrosens lunchstruktur till andra avdelningar? Plan: workshop på studiedagen i april.</p>
+            <div class="story-card__chips">
+              <span class="story-card__chip">Nivå 4 · Förvaltning</span>
+              <a class="story-card__chip is-link" href="mallar/nohra-samtal.html">NÖHRA-samtalsguide</a>
+            </div>
+          </article>
+
+          <article class="story-card lv-1">
+            <span class="story-card__month">April</span>
+            <h4 class="story-card__title">Utvärdering — barnens upplevelse</h4>
+            <p class="story-card__text">Adam står i hallen och ropar "Khaled, var ska jag sitta?". Han har språket för att fråga, han vet att det finns ett svar. På Solrosen är "lunchstrukturen" nu en del av <em>hur de gör förskola</em>.</p>
+            <div class="story-card__chips">
+              <span class="story-card__chip">Nivå 1 · Barnet</span>
+              <span class="story-card__chip">Vision uppnådd</span>
+            </div>
+          </article>
+
+        </div>
+        <p class="story-scroll-hint">← scrolla i sidled för hela året →</p>
+      </div>
+
+      <div class="story-result">
+        <h3>Vad hände egentligen?</h3>
+        <p>
+          Inget steg i sig var revolutionerande. Arbetslaget gjorde det de alltid gjort. Specialpedagogen ledde ett standardmöte. Rektorn coachade. Bitr. utbildningschefen pratade med rektorn. Men <strong>varje nivå visste sin roll, varje verktyg fanns på sin plats, och informationen flödade både inåt (stöd) och utåt (lärdom)</strong>. Det är hela poängen med Mariaskarta: att göra det självklara <em>synligt</em>, så att det kan upprepas.
+        </p>
       </div>
     </div>
   </section>
@@ -413,6 +653,7 @@ flowchart TB
           <h3>Kontaktbarometern <small>Veckorutin</small></h3>
           <p>Varje pedagog markerar för varje barn: <strong>+</strong> positiv kontakt, <strong>−</strong> negativ kontakt eller tillsägelse, <strong>0</strong> ingen kontakt. Diskuteras i arbetslaget.</p>
           <div class="tool__use"><strong>Används av:</strong> arbetslaget varje vecka; resultat kopplas till närvaromönster.</div>
+          <a class="tool__mall" href="mallar/kontaktbarometer.html">Öppna mall</a>
           <p class="tool__source">Källa: <a href="https://www.vilarare.se/fritidspedagogik/sa-gor-vi/ida-mari-haller-koll-med-en-kontaktbarometer/">Vi Lärare — Ida-Mari</a></p>
         </article>
 
@@ -420,6 +661,7 @@ flowchart TB
           <h3>NÖHRA-modellen <small>Coachande samtal</small></h3>
           <p><strong>N</strong>uläge · <strong>Ö</strong>nskat läge · <strong>H</strong>inder · <strong>R</strong>esurser · <strong>A</strong>ktiviteter. Lösningsfokuserad sortering.</p>
           <div class="tool__use"><strong>Används av:</strong> biträdande utbildningschef + central specialpedagog i möten med rektor; rektor i samtal med arbetslag.</div>
+          <a class="tool__mall" href="mallar/nohra-samtal.html">Öppna samtalsguide</a>
           <p class="tool__source">Källa: <a href="https://interactcom.se/nohra">InterACT</a> · <a href="https://kraftochbalans.com/nohra-modell-for-samtal/">Kraft &amp; Balans</a></p>
         </article>
 
@@ -427,7 +669,16 @@ flowchart TB
           <h3>Isbergsmodellen <small>Perspektivskifte</small></h3>
           <p>Ovanför ytan: <em>observerbart beteende</em>. Under ytan: <em>bakomliggande behov, känslor, sammanhang.</em> Av Anna Hellberg Björklund.</p>
           <div class="tool__use"><strong>Används av:</strong> rektor/bitr. rektor i pedagogisk avstämning; dokumenteras på papper.</div>
+          <a class="tool__mall" href="mallar/isbergsmodellen.html">Öppna blankett</a>
           <p class="tool__source">Källa: <a href="https://forskoleforum.se/serier/isbergsmodellen">Förskoleforum — Isbergsmodellen</a></p>
+        </article>
+
+        <article class="tool">
+          <h3>Pedagogisk avstämning <small>Mötesprotokoll</small></h3>
+          <p>Strukturerat möte mellan arbetslag, specialpedagog och rektor. Utgår från SKA, ställer de sju frågorna på en vald stund. Rollfördelning + uppföljning.</p>
+          <div class="tool__use"><strong>Används av:</strong> nivå 3, kontinuerligt under året.</div>
+          <a class="tool__mall" href="mallar/pedagogisk-avstamning.html">Öppna protokoll</a>
+          <p class="tool__source">Tillämpas i kombination med Isbergsmodellen vid behov.</p>
         </article>
 
         <article class="tool">
@@ -730,7 +981,9 @@ NÄR JAG STÄLLER FRÅGA
       <h4>Sektioner</h4>
       <ul>
         <li><a href="#oversikt">Översikt</a></li>
+        <li><a href="#aha">Helheten på en bild</a></li>
         <li><a href="#processkarta">Processkarta</a></li>
+        <li><a href="#berattelse">Berättelsen</a></li>
         <li><a href="#arshjul">Årshjul</a></li>
         <li><a href="#kommunikation">Kommunikationsplan</a></li>
         <li><a href="#verktygslada">Verktygslåda</a></li>
@@ -739,12 +992,14 @@ NÄR JAG STÄLLER FRÅGA
       </ul>
     </div>
     <div>
-      <h4>Nästa steg</h4>
+      <h4>Utskrivbara mallar</h4>
       <ul>
-        <li><a href="javascript:window.print()">Skriv ut som PDF</a></li>
-        <li><a href="https://claude.ai/projects">Skapa Claude Project</a></li>
-        <li><a href="https://mermaid.live/">Redigera diagram i Mermaid Live</a></li>
-        <li><a href="https://draw.io">Importera till draw.io</a></li>
+        <li><a href="mallar/index.html">Alla mallar</a></li>
+        <li><a href="mallar/pedagogisk-avstamning.html">Pedagogisk avstämning</a></li>
+        <li><a href="mallar/isbergsmodellen.html">Isbergsmodellen</a></li>
+        <li><a href="mallar/kontaktbarometer.html">Kontaktbarometer</a></li>
+        <li><a href="mallar/nohra-samtal.html">NÖHRA-samtal</a></li>
+        <li><a href="javascript:window.print()">Skriv ut hela sajten</a></li>
       </ul>
     </div>
   </div>

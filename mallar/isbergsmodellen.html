@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Isbergsmodellen — blankett | Mariaskarta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/mall.css">
+  <style>
+    body { font-family: "Inter", -apple-system, sans-serif; background: #F7F5F0; margin: 0; }
+    .iceberg { display: flex; justify-content: center; margin: 1em 0; }
+    .iceberg svg { max-width: 320px; width: 100%; height: auto; }
+  </style>
+</head>
+<body class="mall">
+
+<button class="print-btn" onclick="window.print()" type="button">Skriv ut / spara som PDF</button>
+
+<header class="mall-header">
+  <div>
+    <h1>Isbergsmodellen</h1>
+    <p class="mall-subtitle">Perspektivskifte: från observerbart beteende till bakomliggande behov, känslor och sammanhang.</p>
+  </div>
+  <div class="mall-brand">
+    Mariaskarta
+    <small>Mall · Nivå 3</small>
+  </div>
+</header>
+
+<div class="mall-meta">
+  <div>
+    <label>Datum</label>
+    <div class="line"></div>
+  </div>
+  <div>
+    <label>Avdelning / arbetslag</label>
+    <div class="line"></div>
+  </div>
+  <div>
+    <label>Dokumenterar</label>
+    <div class="line"></div>
+  </div>
+  <div>
+    <label>Gäller</label>
+    <div class="checkbox-row" style="grid-template-columns: 1fr 1fr; margin: 0;">
+      <label><span class="checkbox"></span> Barngrupp</label>
+      <label><span class="checkbox"></span> Enskilt barn</label>
+    </div>
+  </div>
+  <div>
+    <label>Vald situation / stund</label>
+    <div class="line"></div>
+  </div>
+  <div>
+    <label>Datum för uppföljning</label>
+    <div class="line"></div>
+  </div>
+</div>
+
+<div class="iceberg">
+  <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" aria-label="Isberg som visar 1/10 ovanför ytan och 9/10 under ytan">
+    <!-- Yta -->
+    <line x1="0" y1="80" x2="320" y2="80" stroke="#1B4B7A" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="8" y="74" font-size="11" fill="#1B4B7A" font-weight="600">YTAN</text>
+
+    <!-- Topp av isberg -->
+    <polygon points="160,15 110,80 210,80" fill="#FFFFFF" stroke="#1B4B7A" stroke-width="2"/>
+    <text x="160" y="55" text-anchor="middle" font-size="10" fill="#1B4B7A" font-weight="600">BETEENDE</text>
+
+    <!-- Undervattensdel -->
+    <polygon points="110,80 210,80 270,270 50,270" fill="#E8EFF6" stroke="#1B4B7A" stroke-width="2"/>
+    <text x="160" y="120" text-anchor="middle" font-size="10" fill="#5A6072" font-weight="600">BEHOV</text>
+    <text x="160" y="155" text-anchor="middle" font-size="10" fill="#5A6072" font-weight="600">KÄNSLOR</text>
+    <text x="160" y="190" text-anchor="middle" font-size="10" fill="#5A6072" font-weight="600">TANKAR</text>
+    <text x="160" y="225" text-anchor="middle" font-size="10" fill="#5A6072" font-weight="600">SAMMANHANG</text>
+    <text x="160" y="258" text-anchor="middle" font-size="10" fill="#5A6072" font-weight="600">ERFARENHET</text>
+  </svg>
+</div>
+
+<h2>Ovanför ytan — vad ser vi?</h2>
+<div class="field field--lg">
+  <span class="field-label">Observerbart beteende</span>
+  <span class="field-hint">Beskriv så konkret du kan, utan tolkningar: vad gör barnet/gruppen, när, hur ofta, var?</span>
+</div>
+
+<h2>Under ytan — vad ser vi inte?</h2>
+
+<h3>Behov</h3>
+<div class="field field--lg">
+  <span class="field-hint">Vilka grundläggande behov kan ligga bakom? Trygghet, tillhörighet, autonomi, kompetens, vila?</span>
+</div>
+
+<h3>Känslor</h3>
+<div class="field field--lg">
+  <span class="field-hint">Vilka känslor kan barnet uttrycka genom beteendet? Rädsla, frustration, ledsamhet, överstimulering?</span>
+</div>
+
+<h3>Tankar och förståelse</h3>
+<div class="field field--lg">
+  <span class="field-hint">Hur uppfattar barnet situationen? Vad förstår barnet, vad förstår barnet inte?</span>
+</div>
+
+<h3>Sammanhang</h3>
+<div class="field field--lg">
+  <span class="field-hint">Vad händer i miljön — ljudnivå, antal vuxna, struktur, övergångar, gruppdynamik?</span>
+</div>
+
+<h3>Tidigare erfarenheter</h3>
+<div class="field field--lg">
+  <span class="field-hint">Finns det mönster vi sett innan? Är det här en återkommande situation? Vad har gjorts tidigare?</span>
+</div>
+
+<div class="info-box">
+  <strong>Påminn er:</strong> Beteendet är 10 % av isberget. De andra 90 % är vad barnet behöver. Skiftet i perspektiv är hela poängen.
+</div>
+
+<h2>Hypotes — vad försöker barnet/gruppen säga oss?</h2>
+<div class="field field--xl">
+  <span class="field-label">Vår gemensamma tolkning utifrån det under ytan</span>
+</div>
+
+<h2>Insatser — utifrån behoven, inte beteendet</h2>
+<ol class="questions">
+  <li>
+    Vad ska vi <strong>börja göra</strong>?
+    <span class="answer-lines tall"></span>
+  </li>
+  <li>
+    Vad ska vi <strong>sluta göra</strong>?
+    <span class="answer-lines tall"></span>
+  </li>
+  <li>
+    Vad behöver <strong>förändras i miljön</strong> (fysisk, social, pedagogisk)?
+    <span class="answer-lines tall"></span>
+  </li>
+  <li>
+    Hur följer vi upp att insatsen ger effekt?
+    <span class="answer-lines"></span>
+  </li>
+</ol>
+
+<h2>Återkoppling</h2>
+<div class="mall-meta" style="grid-template-columns: repeat(2, 1fr)">
+  <div>
+    <label>Förs in i SKA av</label>
+    <div class="line"></div>
+  </div>
+  <div>
+    <label>Följs upp på avstämning</label>
+    <div class="line"></div>
+  </div>
+</div>
+
+<p class="source">Isbergsmodellen i förskola — Anna Hellberg Björklund. Källa: forskoleforum.se</p>
+
+<nav class="mall-nav">
+  ← <a href="../index.html#verktygslada">Tillbaka till verktygslådan</a>
+  <a href="pedagogisk-avstamning.html">Pedagogisk avstämning</a>
+  <a href="kontaktbarometer.html">Kontaktbarometer</a>
+</nav>
+
+</body>
+</html>

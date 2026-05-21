@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontaktbarometer — mall | Mariaskarta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/mall.css">
+  <style>
+    body { font-family: "Inter", -apple-system, sans-serif; background: #F7F5F0; margin: 0; }
+    .barometer-table { font-size: 9.5pt; }
+    .barometer-table th, .barometer-table td { padding: 0.3em 0.4em; }
+    .barometer-table .child-col { width: 30%; }
+    .barometer-table .ped-col { text-align: center; width: 11%; }
+    .barometer-table .symbol-row td { height: 1.8em; }
+    .legend {
+      display: flex; gap: 1.5em; justify-content: center; margin: 0.6em 0 1em;
+      padding: 0.6em; background: #F7F5F0; border-radius: 4px; font-size: 10pt;
+    }
+    .legend .item { display: flex; align-items: center; gap: 0.35em; }
+    .legend .sym {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 1.5em; height: 1.5em; border-radius: 50%; font-weight: 700; color: #FFFFFF; font-size: 10pt;
+    }
+    .legend .sym.plus { background: #4A7C59; }
+    .legend .sym.minus { background: #E27D60; }
+    .legend .sym.zero { background: #BFB9A9; color: #1A2238; }
+  </style>
+</head>
+<body class="mall">
+
+<button class="print-btn" onclick="window.print()" type="button">Skriv ut / spara som PDF</button>
+
+<header class="mall-header">
+  <div>
+    <h1>Kontaktbarometer</h1>
+    <p class="mall-subtitle">Veckomall för att synliggöra pedagogiska relationer mellan vuxna och barn.</p>
+  </div>
+  <div class="mall-brand">
+    Mariaskarta
+    <small>Mall · Nivå 2</small>
+  </div>
+</header>
+
+<div class="mall-meta">
+  <div>
+    <label>Vecka</label>
+    <div class="line"></div>
+  </div>
+  <div>
+    <label>Avdelning</label>
+    <div class="line"></div>
+  </div>
+  <div>
+    <label>Datum för ifyllande</label>
+    <div class="line"></div>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="item"><span class="sym plus">+</span> Övervägande positiv kontakt eller samtal</div>
+  <div class="item"><span class="sym minus">−</span> Negativ kontakt eller tillsägelse</div>
+  <div class="item"><span class="sym zero">0</span> Ingen kontakt under veckan</div>
+</div>
+
+<div class="info-box">
+  <strong>Så fyller ni i:</strong> Varje pedagog markerar för varje barn vad veckans möten övervägande bestått av. Diskutera tillsammans i arbetslaget — om en pedagog ser att hen inte pratat med ett barn ska en kollega ha gjort det. Inget barn ska "försvinna".
+</div>
+
+<table class="barometer-table">
+  <thead>
+    <tr>
+      <th class="child-col">Barnets förnamn</th>
+      <th class="ped-col">Pedagog 1</th>
+      <th class="ped-col">Pedagog 2</th>
+      <th class="ped-col">Pedagog 3</th>
+      <th class="ped-col">Pedagog 4</th>
+      <th class="ped-col">Pedagog 5</th>
+      <th class="ped-col">Anteckning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 18 tomma rader -->
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr class="symbol-row"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+
+<h2>Sammanfattning av veckan</h2>
+<div class="mall-meta">
+  <div>
+    <label>Antal barn med övervägande +</label>
+    <div class="line"></div>
+  </div>
+  <div>
+    <label>Antal barn med − eller 0</label>
+    <div class="line"></div>
+  </div>
+  <div>
+    <label>Närvaromönster kopplas till</label>
+    <div class="line"></div>
+  </div>
+</div>
+
+<h2>Reflektion i arbetslaget</h2>
+<div class="field field--xl">
+  <span class="field-label">Vilka mönster ser vi? Vilka barn behöver vi vara extra uppmärksamma på?</span>
+</div>
+
+<h2>Plan för veckan framåt — insatser för barn med − eller 0</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width:25%">Barn</th>
+      <th style="width:45%">Insats / planerad kontakt</th>
+      <th>Ansvarig pedagog</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  </tbody>
+</table>
+
+<div class="info-box">
+  <strong>Vid återkommande − eller 0 i flera veckor:</strong> Lyft i nästa pedagogiska avstämning. Använd vid behov Isbergsmodellen för att skifta från beteende till behov.
+</div>
+
+<p class="source">Kontaktbarometern enligt Ida-Mari. Källa: vilarare.se</p>
+
+<nav class="mall-nav">
+  ← <a href="../index.html#verktygslada">Tillbaka till verktygslådan</a>
+  <a href="pedagogisk-avstamning.html">Pedagogisk avstämning</a>
+  <a href="isbergsmodellen.html">Isbergsmodellen</a>
+</nav>
+
+</body>
+</html>
