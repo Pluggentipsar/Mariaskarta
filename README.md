@@ -1,83 +1,90 @@
 # Mariaskarta
 
-Ett digitalt navigationsverktyg för **biträdande förskolechef Maria Blixt Ekström** — en interaktiv processkarta, ett årshjul, en kommunikationsplan och en samling färdiga AI-promptar för likvärdig och inkluderande utbildning i förskolan.
+Ett digitalt navigationsverktyg för **biträdande förskolechef Maria Blixt Ekström** — interaktiv processkarta, årshjul, kommunikationsplan, mallar och AI-stöd för likvärdig och inkluderande utbildning i förskolan.
 
 > **Vision:** Alla barn ska känna tilltro till sin förmåga som en lärande individ.
 
-## Vad är det här?
+## Struktur
 
-Maria skickade ett mail där hon kämpade med att tydliggöra processen för stöd till arbetslag på olika nivåer i styrkedjan — barngrupp → arbetslag → specialpedagog/rektor → förvaltning. Hennes anteckningar var rika men ostrukturerade. Mariaskarta är ett försök att göra hennes vision konkret, delningsbar, utskrivbar och presenterbar.
+Sajten är en statisk multi-page-app utan byggprocess. En tight landningssida som dirigerar vidare till åtta fokuserade subpages.
 
-Sajten innehåller:
-
-1. **Processkartan** — En visuell flowchart i Mermaid med fyra nivåer i styrkedjan, plus förvaltningens stödfunktioner och kollegialt lärande som horisontella linjer.
-2. **Årshjulet** — Ett interaktivt SVG-årshjul med konkreta insatser månad för månad (Kontaktbarometern, strukturschema, pedagogisk avstämning, utvärdering).
-3. **Kommunikationsplan** — Kotters 8 steg som strategisk grund, ADKAR-modellen som budskap till varje rektor, plus förslag på svar till troliga invändningar.
-4. **Pedagogisk verktygslåda** — Tolv begrepp och ramverk med korta förklaringar och länkar till primärkällor (Lpfö 18 rev 2025, SPSM, David Edfelt, NÖHRA, Isbergsmodellen, Före Bornholm m.fl.).
-5. **AI-promptar** — Fem färdiga prompts på svenska, inklusive en återanvändbar system-prompt för en Claude Project / Custom GPT specialiserad på svensk förskolepedagogik.
-6. **Källor** — Komplett referensförteckning med alla länkar verifierbara.
-
-## Hur används den?
-
-### Som webbsida
-Öppna `index.html` i en webbläsare. Allt är statiskt — ingen server, inga beroenden utöver Mermaid.js (via CDN). Fungerar offline efter första besöket om man cachear sidan.
-
-### Som utskrift
-Tryck **Ctrl+P / Cmd+P** i webbläsaren och välj "Spara som PDF". Sidan har en utskriftsoptimerad stylesheet som tar bort navigation och justerar paginering för A4. Kan användas som handout till rektorer eller delas i Teams.
-
-### Som mall för vidareutveckling
-Filerna är tre stycken: `index.html`, `assets/styles.css`, `assets/app.js`. Allt innehåll bor i HTML. För att ändra ett månadsinnehåll i årshjulet — redigera `months`-arrayen överst i `app.js`. För att ändra processkartan — redigera Mermaid-koden i `#processkarta`-sektionen i `index.html`.
-
-### Som källa för AI-assistent
-Använd prompt #5 i sektionen "AI-promptar" för att sätta upp en återanvändbar Claude Project eller Custom GPT som är "påläst" på svensk förskolepedagogik. Ladda upp Lpfö 18 + kommunens egna riktlinjer som projektfiler.
-
-## Deployment
-
-### GitHub Pages (rekommenderat)
-1. Pusha repot till GitHub.
-2. Repository Settings → Pages → Source: `main` branch, root `/`.
-3. Sajten är live på `https://<användare>.github.io/<repo>` inom någon minut.
-
-### Netlify / Vercel / Cloudflare Pages
-Dra och släpp mappen till respektive plattforms gränssnitt. Ingen byggprocess behövs.
-
-### Lokalt
-```bash
-# Med Python:
-python3 -m http.server 8080
-
-# Med Node:
-npx serve .
+```
+/
+├── index.html              Landningssida — aha-bild + "jag vill..."-kort
+├── karta.html              Den centrala processkartan (Mermaid)
+├── berattelse.html         Solrosens år — berättelsen som knyter ihop
+├── arshjul.html            Interaktivt årshjul
+├── kommunikation.html      Kotters 8 steg + ADKAR-modellen
+├── verktyg.html            Pedagogisk verktygslåda (12 begrepp)
+├── promptar.html           AI-promptar för Claude / ChatGPT
+├── kallor.html             Verifierbar referensförteckning
+│
+├── mallar/                 Utskrivbara A4-mallar (subdomän)
+│   ├── index.html
+│   ├── pedagogisk-avstamning.html
+│   ├── isbergsmodellen.html
+│   ├── kontaktbarometer.html
+│   └── nohra-samtal.html
+│
+├── assets/
+│   ├── styles.css          Huvudstilar
+│   ├── mall.css            Mallspecifika stilar (A4 print)
+│   ├── app.js              Mermaid-init + årshjul-SVG + copy-knappar
+│   └── mermaid.min.js      Vendat lokalt för offline-stöd
+│
+└── till-maria.md           Färdig mailmall till Maria
 ```
 
-Öppna `http://localhost:8080`.
+## UX-principer
 
-## Tekniska val (för den som vill veta)
+Varje subpage följer samma mönster:
+
+1. **Sticky toppnav** — samma på alla sidor, aktiv sida markerad med `aria-current="page"`.
+2. **Breadcrumb** — "Hem › Sektion" så användaren alltid vet var hen är.
+3. **Page hero** — kort titel + ledtext.
+4. **Purpose strip** — en rad: "Använd när …" — tydliggör syftet.
+5. **Innehåll** — fokuserat på en uppgift.
+6. **Pager** — föregående/nästa knappar för linjär läsning.
+7. **Footer** — samma kategoristruktur överallt.
+
+Landningssidan har dessutom **"Vad vill du göra idag?"-kort** som dirigerar till rätt subpage utifrån användarens jobb (inte utifrån innehållstyp).
+
+## Centrala visualiseringar
+
+- **Aha-bilden** (på landningen): koncentriskt SVG-diagram med barnet i centrum, arbetslaget runt om, sp/rektor i tredje ringen, förvaltningen ytterst. Året som rytm runt allt.
+- **Processkartan** (`/karta.html`): Mermaid-flowchart med klickbara noder som hoppar till rätt mall.
+- **Årshjulet** (`/arshjul.html`): interaktiv SVG där varje månad är klickbar.
+- **Berättelsen** (`/berattelse.html`): 9 scenkort i horisontell tidslinje som följer arbetslaget Solrosen genom ett år.
+
+## Användning
+
+### Som webbsida
+Öppna `index.html` i en webbläsare. Ingen server behövs.
+
+### Som utskrift
+Tryck **Ctrl+P / Cmd+P** på vilken sida som helst. Varje sida har egen utskriftsoptimerad stylesheet.
+
+### Som mall för vidareutveckling
+Allt innehåll är i HTML-filer som kan redigeras direkt i en texteditor. Inga build-steg, inga dependencies att underhålla.
+
+### Deployment
+- **GitHub Pages**: aktivera i Settings → Pages, peka mot `main` root `/`. Sajten live på `https://<owner>.github.io/<repo>/` inom någon minut.
+- **Netlify/Vercel**: dra-och-släpp mappen.
+
+## Tekniska val
 
 | Val | Varför |
 |---|---|
-| **Statisk HTML/CSS/JS** | Ingen build-process. Maria (eller en kollega) kan redigera direkt i en texteditor utan kunskap om npm, webpack, React. |
-| **Mermaid.js** | Bästa lågtröskelvalet för processkartor. Textbaserad syntax (lätt att versionera). Renderas client-side. |
-| **Custom SVG för årshjulet** | Inget moget årshjuls-bibliotek finns. ~150 rader vanilla JS räcker, och SVG skalar perfekt för utskrift. |
-| **Inter + Source Serif Pro** | Lugn, professionell typografi som ser hemma ut i kommunalt sammanhang. |
-| **Skolverket-inspirerad palett** | Djupblå primärfärg + varm accent, tillgängliga kontraster, dämpat. |
-| **Inga ramverk** | Ingen React, ingen Vue. Långtidshållbart utan dependency-skuld. |
+| Multi-page (statisk HTML) | Varje sida har ett syfte. Delbar URL per ämne. Skriver ut en sida i taget. |
+| Inga ramverk | Ingen React, ingen build. Långtidshållbart. |
+| Mermaid vendat lokalt | Funkar offline + på sandboxade nätverk. |
+| Inter + Source Serif Pro | Lugn typografi som passar svensk kommunal kontext. |
+| Skolverket-inspirerad palett | Djupblå primär, varm accent, dämpat. |
 
-## Begrepp som processkartan referenser
+## Pedagogiska källor
 
-- **Lpfö 18 rev 2025** — Läroplan för förskolan, gäller från 1 juli 2025
-- **SKA** — Systematiskt kvalitetsarbete (Skolverkets fyra faser)
-- **SPSM:s tillgänglighetsmodell** — Pedagogisk, social, fysisk lärmiljö
-- **De sju frågorna** — Tydliggörande pedagogik: Vad? Var? När? Hur? Med vem? Hur länge? Varför?
-- **Kontaktbarometern** — Veckorutin för att kartlägga pedagog-barn-relationer
-- **NÖHRA-modellen** — Nuläge, Önskat läge, Hinder, Resurser, Aktiviteter
-- **Isbergsmodellen** — Anna Hellberg Björklund, för perspektivskifte i pedagogisk avstämning
-- **Före Bornholm** — Görel Sterner & Ingvar Lundberg, språkutvecklande material
-- **En förskola för var och en** — David Edfelts åtta moduler
-- **Kotters 8 steg + ADKAR** — Förändringsledning
-
-Se sektionen "Verktygslåda" i sajten för fullständiga referenser och källor.
+Verifierbar referensförteckning på `/kallor.html`. Inkluderar Lpfö 18 rev 2025, SPSM:s tillgänglighetsmodell, David Edfelt, NÖHRA, Isbergsmodellen, Eidevalds rapport "Rätt start i livet", Kotter, ADKAR och mer.
 
 ## Licens
 
-Fri att använda, modifiera och vidareutveckla inom svensk kommunal verksamhet. Källkoden är offentlig (MIT-licensanda). Pedagogiska referenser och citat ligger hos sina respektive upphovsmän — kontrollera deras licensvillkor innan kommersiell användning.
+Fri att använda, modifiera och vidareutveckla inom svensk kommunal verksamhet. Källkoden är MIT (se `LICENSE`). Pedagogiska referenser ligger hos sina respektive upphovsmän.

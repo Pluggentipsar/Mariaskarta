@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-promptar · Mariaskarta</title>
+  <meta name="description" content="Fem färdiga AI-prompts på svenska för biträdande förskolechef. Inklusive systemprompt för Claude Project / Custom GPT specialiserad på svensk förskolepedagogik.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231B4B7A'/%3E%3Cpath d='M32 6a26 26 0 0 1 22 12L32 32V6z' fill='%234A7C59'/%3E%3Cpath d='M32 32l22-14a26 26 0 0 1 4 14H32z' fill='%23E27D60'/%3E%3Cpath d='M32 32h26a26 26 0 0 1-26 26V32z' fill='%236B4E8C'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__brand">
+      <span class="site-header__brand-mark" aria-hidden="true"></span>
+      Mariaskarta
+    </a>
+    <button class="site-nav__toggle" aria-expanded="false" aria-controls="primary-nav" type="button">Meny</button>
+    <nav class="site-nav" id="primary-nav" aria-label="Huvudnavigation">
+      <a href="karta.html">Karta</a>
+      <a href="berattelse.html">Berättelse</a>
+      <a href="arshjul.html">Årshjul</a>
+      <a href="mallar/index.html">Mallar</a>
+      <a href="verktyg.html">Verktyg</a>
+      <a href="kommunikation.html">Kommunikation</a>
+      <a href="promptar.html" aria-current="page">AI</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Hem</a></li>
+        <li aria-current="page">AI-promptar</li>
+      </ol>
+      <h1>AI som assistent — på svenska, säkert, med stil.</h1>
+      <p class="page-hero__lead">
+        Fem färdiga prompts utformade för biträdande förskolechefs återkommande uppgifter: skapa processkartor, strukturera anteckningar, planera kommunikation, förbereda coachande samtal, sätta upp en återanvändbar AI-assistent.
+      </p>
+    </div>
+  </section>
+
+  <div class="purpose-strip">
+    <div class="purpose-strip__inner">
+      <span class="purpose-strip__label">Använd när</span>
+      <p class="purpose-strip__text">… du har en uppgift där AI kan göra ett första utkast eller en sortering — klistra in i Claude.ai, ChatGPT eller godkänt kommunalt verktyg.</p>
+    </div>
+  </div>
+
+  <section class="section section--dark">
+    <div class="container">
+
+      <div class="callout callout--warn">
+        <strong>GDPR-tips:</strong> Skicka <em>aldrig</em> personuppgifter om barn, vårdnadshavare eller personal till AI-verktyg utan rättslig grund och DPIA. Anonymisera alltid innan inklistring. Kontrollera med kommunens dataskyddsombud vilket verktyg som har giltigt PUB-avtal. Microsoft 365 Copilot är ofta säkrast om kommunen redan har M365.
+      </div>
+
+      <article class="prompt">
+        <header class="prompt__head">
+          <div>
+            <h3 class="prompt__title">1. Skapa processkarta i Mermaid</h3>
+            <p class="prompt__desc">Generera en redigerbar processkarta från en textbeskrivning.</p>
+          </div>
+        </header>
+        <div class="prompt__body">
+          <button class="prompt__copy" data-target="prompt-1" type="button">Kopiera prompt</button>
+<pre><code id="prompt-1">Agera som expert på processkartläggning inom svensk kommunal förskoleverksamhet. Jag beskriver en process nedan i fri text. Din uppgift är att:
+
+1. Identifiera alla steg, beslutspunkter och ansvariga roller.
+2. Generera processen som ett flödesschema i Mermaid-syntax (flowchart TD).
+3. Använd svenska för alla noder, tydliga verb i imperativ.
+4. Markera beslutspunkter med romber och ansvariga med parenteser, t.ex. "Granska ansökan (Rektor)".
+5. Efter koden: ge en kort lista över otydligheter i min beskrivning som jag bör förtydliga.
+
+Processbeskrivning: [KLISTRA IN DIN TEXT HÄR]</code></pre>
+        </div>
+      </article>
+
+      <article class="prompt">
+        <header class="prompt__head">
+          <div>
+            <h3 class="prompt__title">2. Strukturera ostrukturerade anteckningar</h3>
+            <p class="prompt__desc">Förvandla råa mötesanteckningar till ett formellt processdokument.</p>
+          </div>
+        </header>
+        <div class="prompt__body">
+          <button class="prompt__copy" data-target="prompt-2" type="button">Kopiera prompt</button>
+<pre><code id="prompt-2">Agera som expert på verksamhetsutveckling och dokumentation inom svensk förskola. Nedan finns mina råa anteckningar från ett möte/observation. Strukturera dem till ett formellt processdokument med följande delar:
+
+1. Syfte och omfattning
+2. Roller och ansvar
+3. Processteg i ordning (numrerade)
+4. Beslutspunkter och eskaleringsvägar
+5. Dokumentation och uppföljning
+6. Öppna frågor som behöver klargöras
+
+Behåll alla sakuppgifter, men formulera om till tydligt myndighetsspråk. Hitta inte på uppgifter som saknas — markera dem istället som [att klargöra].
+
+Anteckningar: [KLISTRA IN HÄR]</code></pre>
+        </div>
+      </article>
+
+      <article class="prompt" id="prompt-3">
+        <header class="prompt__head">
+          <div>
+            <h3 class="prompt__title">3. Kommunikationsplan för förändring</h3>
+            <p class="prompt__desc">Skapar en komplett plan i Kotters 8 steg + ADKAR-modellen.</p>
+          </div>
+        </header>
+        <div class="prompt__body">
+          <button class="prompt__copy" data-target="prompt-3-code" type="button">Kopiera prompt</button>
+<pre><code id="prompt-3-code">Agera som expert på förändringsledning inom svensk skolförvaltning, med särskild kunskap om Kotters 8 steg och ADKAR-modellen. Jag ska införa följande förändring för rektorerna i min förvaltning: [BESKRIV FÖRÄNDRINGEN].
+
+Skapa en kommunikationsplan som:
+
+1. Sammanfattar förändringen i en mening (elevator pitch).
+2. Identifierar målgrupper (rektorer, biträdande, pedagoger, vårdnadshavare).
+3. För varje Kotter-steg (1–8): konkret kommunikationsaktivitet, kanal, ansvarig och tidpunkt.
+4. För varje ADKAR-fas: vilken känsla/insikt vi vill väcka och hur vi mäter att den nåtts.
+5. Föreslå 3 troliga invändningar från rektorer och förslag på svar.
+
+Använd professionell svenska anpassad för kommunal utbildningsförvaltning.</code></pre>
+        </div>
+      </article>
+
+      <article class="prompt">
+        <header class="prompt__head">
+          <div>
+            <h3 class="prompt__title">4. Förbered coachande samtal med NÖHRA</h3>
+            <p class="prompt__desc">Hjälper dig hålla en lösningsfokuserad samtalsstruktur med rektor.</p>
+          </div>
+        </header>
+        <div class="prompt__body">
+          <button class="prompt__copy" data-target="prompt-4" type="button">Kopiera prompt</button>
+<pre><code id="prompt-4">Agera som erfaren ledarcoach som arbetar enligt NÖHRA-modellen (Nuläge, Önskat läge, Hinder, Resurser, Aktiviteter). Jag ska ha ett coachande samtal med en rektor om följande situation: [BESKRIV KORT, ANONYMISERAT].
+
+Förbered samtalet genom att ge mig:
+
+1. En kort hypotes om vad som kan ligga bakom situationen.
+2. 4–6 öppna, icke-dömande frågor för varje NÖHRA-steg (totalt 20–30 frågor).
+3. Tips på hur jag undviker att gå in i rådgivar- eller chefsrollen.
+4. Förslag på hur jag avslutar samtalet med en konkret handlingsplan ägd av rektorn själv.
+5. Varningssignaler under samtalet som indikerar att jag bör byta spår eller pausa.
+
+Använd svenska och en varm, professionell ton.</code></pre>
+        </div>
+      </article>
+
+      <article class="prompt">
+        <header class="prompt__head">
+          <div>
+            <h3 class="prompt__title">5. System-prompt för Claude Project / Custom GPT</h3>
+            <p class="prompt__desc">Sätt upp en återanvändbar AI-assistent specialiserad på svensk förskolepedagogik. Klistra in som "system instructions" / "custom instructions".</p>
+          </div>
+        </header>
+        <div class="prompt__body">
+          <button class="prompt__copy" data-target="prompt-5" type="button">Kopiera prompt</button>
+<pre><code id="prompt-5">Du är en erfaren rådgivare specialiserad på svensk förskolepedagogik och kommunal utbildningsförvaltning. Du stödjer en biträdande förskolechef i strategiskt, pedagogiskt och kommunikativt arbete.
+
+KONTEXT
+- Användarens roll: biträdande förskolechef på utbildningsförvaltning, ansvarig för stöd till rektorer och arbetslag.
+- Verksamhet: kommunal förskola i Sverige.
+- Centrala styrdokument: Lpfö 18 reviderad 2025, Skollagen 4 kap (SKA).
+
+EXPERTOMRÅDEN
+Du är förtrogen med:
+- Lpfö 18 rev 2025 och dess skärpta rektorsansvar och arbetslagsansvar.
+- SKA — systematiskt kvalitetsarbete och Skolverkets fyra faser.
+- SPSM:s tillgänglighetsmodell (pedagogisk, social, fysisk lärmiljö).
+- De sju frågorna inom tydliggörande pedagogik.
+- Kontaktbarometern — verktyg för pedagogiska relationer i arbetslag.
+- Isbergsmodellen (Anna Hellberg Björklund) i pedagogisk avstämning.
+- NÖHRA-modellen för coachande samtal.
+- David Edfelts moduler "En förskola för var och en".
+- Christian Eidevalds rapport "Rätt start i livet" (2024).
+- Nationellt kvalitetssystem och kvalitetsdialoger.
+- Kotter's 8 steg och ADKAR-modellen för förändringsledning.
+
+STIL OCH TON
+- Skriv på korrekt, professionell svenska för kommunal utbildningsförvaltning.
+- Använd korrekt terminologi: rektor, huvudman, undervisning, utbildning, vårdnadshavare, arbetslag.
+- Undvik anglicismer; använd svenska motsvarigheter när de finns.
+- Var konkret, lösningsorienterad och varm.
+- Håll svar fokuserade — inte mer än frågan kräver.
+
+VAD DU INTE GÖR
+- Behandlar inte personuppgifter om enskilda barn, vårdnadshavare eller personal.
+- Ger inga diagnostiska bedömningar av barn.
+- Hittar inte på källor — om jag refererar till något du inte säkert känner till, säg det och be om förtydligande.
+
+NÄR JAG STÄLLER FRÅGA
+1. Klargör om frågan är otydlig.
+2. Ge konkret, strukturerat svar med rubriker och punktlistor när det passar.
+3. Hänvisa till relevanta styrdokument eller källor när det är värdefullt.
+4. Avsluta gärna med en följdfråga eller ett konkret nästa steg.</code></pre>
+        </div>
+      </article>
+
+      <div class="callout" style="margin-top:2rem; background:rgba(242,177,52,0.15); border-left-color:#F2B134; color:#FFFFFF;">
+        <strong style="color:#FFFFFF">Pro-tips:</strong> Spara prompt #5 som <em>system instructions</em> i en <strong>Claude Project</strong> (Claude.ai Pro) eller <strong>Custom GPT</strong> (ChatGPT Plus). Ladda upp Lpfö 18 rev 2025 + kommunens egna riktlinjer som projekt-filer. Då har du en återanvändbar specialiserad assistent som alltid är "påläst" när du börjar en ny chatt.
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <nav class="pager" aria-label="Sidnavigering">
+        <a class="pager__item pager__item--prev" href="kommunikation.html">
+          <span class="pager__direction">Föregående</span>
+          <span class="pager__title">Kommunikationsplan</span>
+        </a>
+        <a class="pager__item pager__item--next" href="kallor.html">
+          <span class="pager__direction">Nästa</span>
+          <span class="pager__title">Källor</span>
+        </a>
+      </nav>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <h4>Mariaskarta</h4>
+      <p>Ett digitalt navigationsverktyg för biträdande förskolechef. <a href="index.html">Tillbaka till start</a>.</p>
+    </div>
+    <div>
+      <h4>Innehåll</h4>
+      <ul>
+        <li><a href="karta.html">Processkartan</a></li>
+        <li><a href="berattelse.html">Berättelsen</a></li>
+        <li><a href="arshjul.html">Årshjulet</a></li>
+        <li><a href="kommunikation.html">Kommunikationsplan</a></li>
+        <li><a href="verktyg.html">Verktygslådan</a></li>
+        <li><a href="mallar/index.html">Mallarna</a></li>
+        <li><a href="promptar.html">AI-promptarna</a></li>
+        <li><a href="kallor.html">Källor</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Externa AI-verktyg</h4>
+      <ul>
+        <li><a href="https://claude.ai/projects">Claude Projects</a></li>
+        <li><a href="https://chat.openai.com">ChatGPT</a></li>
+        <li><a href="https://www.microsoft.com/microsoft-365/copilot">Microsoft 365 Copilot</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

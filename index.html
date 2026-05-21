@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mariaskarta — Processkarta för stöd till arbetslag i förskolan</title>
-  <meta name="description" content="Ett digitalt navigationsverktyg för biträdande förskolechef: processkarta, årshjul, kommunikationsplan och AI-verktyg för likvärdig och inkluderande utbildning i förskolan.">
+  <meta name="description" content="Ett digitalt navigationsverktyg för biträdande förskolechef: processkarta, årshjul, kommunikationsplan, mallar och AI-verktyg för likvärdig och inkluderande utbildning i förskolan.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,100 +18,41 @@
 
 <header class="site-header" role="banner">
   <div class="site-header__inner">
-    <a href="#topp" class="site-header__brand">
+    <a href="index.html" class="site-header__brand" aria-current="page">
       <span class="site-header__brand-mark" aria-hidden="true"></span>
       Mariaskarta
     </a>
     <button class="site-nav__toggle" aria-expanded="false" aria-controls="primary-nav" type="button">Meny</button>
     <nav class="site-nav" id="primary-nav" aria-label="Huvudnavigation">
-      <a href="#oversikt">Översikt</a>
-      <a href="#aha">Helheten</a>
-      <a href="#processkarta">Karta</a>
-      <a href="#berattelse">Berättelse</a>
-      <a href="#arshjul">Årshjul</a>
-      <a href="#kommunikation">Kommunikation</a>
-      <a href="#verktygslada">Verktyg</a>
+      <a href="karta.html">Karta</a>
+      <a href="berattelse.html">Berättelse</a>
+      <a href="arshjul.html">Årshjul</a>
       <a href="mallar/index.html">Mallar</a>
-      <a href="#promptar">Promptar</a>
+      <a href="verktyg.html">Verktyg</a>
+      <a href="kommunikation.html">Kommunikation</a>
+      <a href="promptar.html">AI</a>
     </nav>
   </div>
 </header>
 
-<main id="topp">
+<main>
 
-  <!-- ============================================================
-       HERO
-       ============================================================ -->
+  <!-- HERO -->
   <section class="hero">
     <div class="container hero__inner">
       <span class="hero__kicker">För biträdande förskolechef · Utbildningsförvaltningen</span>
       <h1 class="hero__title">En tydlig karta för <em>likvärdig och inkluderande</em> utbildning i förskolan.</h1>
       <p class="hero__lead">
-        Mariaskarta är en digital översikt över processen för stöd till arbetslag i förskolan — från barngrupp till förvaltning. Visualiserad i fyra nivåer i styrkedjan, ett årshjul med konkreta insatser månad för månad, en kommunikationsplan för implementering, en pedagogisk verktygslåda och färdiga AI-promptar.
+        Mariaskarta är ett digitalt navigationsverktyg som visualiserar processen för stöd till arbetslag — från barngrupp till förvaltning. Allt på ett ställe: karta, årshjul, kommunikationsplan, mallar och AI-stöd.
       </p>
 
       <div class="hero__vision">
         <p>Alla barn ska känna tilltro till sin förmåga som en lärande individ.</p>
       </div>
-
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#processkarta">Visa processkartan</a>
-        <a class="btn btn--ghost" href="#arshjul">Öppna årshjulet</a>
-        <a class="btn btn--ghost no-print" href="javascript:window.print()">Skriv ut hela kartan</a>
-      </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       ÖVERSIKT — fyra nivåer
-       ============================================================ -->
-  <section class="section" id="oversikt">
-    <div class="container">
-      <span class="section__eyebrow">Fyra nivåer i styrkedjan</span>
-      <h2>En logik som börjar i barngruppen och bärs upp av förvaltningen.</h2>
-      <p class="section__lead">
-        Processen är hierarkisk men inte top-down. Den utgår från <strong>barnens behov</strong> och rör sig uppåt: arbetslag dokumenterar, specialpedagog och rektor stämmer av, förvaltningen stöttar med främjande och förebyggande insatser. På varje nivå finns konkreta verktyg och rutiner.
-      </p>
-
-      <div class="card-grid">
-        <article class="card card--level-1">
-          <span class="card__mark" aria-hidden="true">1</span>
-          <h3>Barnet &amp; barngruppen</h3>
-          <p>Utgångspunkten. Tillgänglig lärmiljö i tre dimensioner. De sju frågorna ställs i varje stund för att säkra förutsägbarhet och meningsfullhet.</p>
-          <a class="card__link" href="#nivå-1">Läs mer</a>
-        </article>
-
-        <article class="card card--level-2">
-          <span class="card__mark" aria-hidden="true">2</span>
-          <h3>Arbetslaget</h3>
-          <p>Planerar och följer upp undervisningsformer. Kontaktbarometern + närvaromönster fångar relationerna. Allt dokumenteras i SKA.</p>
-          <a class="card__link" href="#nivå-2">Läs mer</a>
-        </article>
-
-        <article class="card card--level-3">
-          <span class="card__mark" aria-hidden="true">3</span>
-          <h3>Specialpedagog / rektor</h3>
-          <p>Pedagogisk avstämning med arbetslaget utifrån SKA och de sju frågorna. Isbergsmodellen och NÖHRA-modellen vid behov.</p>
-          <a class="card__link" href="#nivå-3">Läs mer</a>
-        </article>
-
-        <article class="card card--level-4">
-          <span class="card__mark" aria-hidden="true">4</span>
-          <h3>Förvaltning</h3>
-          <p>Främjande och förebyggande: biträdande utbildningschef och central specialpedagog möter rektor med ledningsgrupp 2 ggr/termin. Samråd vid behov.</p>
-          <a class="card__link" href="#nivå-4">Läs mer</a>
-        </article>
-      </div>
-
-      <div class="callout">
-        <strong>Den röda tråden:</strong> Insatser som planeras på förvaltningsnivå hamnar tillbaka i arbetslagets SKA — och följs upp i nästa pedagogiska avstämning. Inget faller mellan stolarna.
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       AHA-BILDEN — hela processen på en sekund
-       ============================================================ -->
+  <!-- AHA-BILDEN — CENTERPIECE -->
   <section class="section" id="aha">
     <div class="container">
       <span class="section__eyebrow">Hela processen — en bild</span>
@@ -123,30 +64,25 @@
       <div class="aha-wrap">
         <svg class="aha-svg" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg"
              role="img" aria-label="Koncentriskt diagram med barnet i centrum, omgiven av arbetslaget, specialpedagog och rektor, förvaltning, och året som en yttre rytm">
-          <!-- Yttre årshjuls-båge -->
           <defs>
-            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-              <polygon points="0 0, 10 3, 0 6" fill="#F2B134"/>
-            </marker>
             <path id="year-curve" d="M 400 50 A 350 350 0 1 1 399 50"/>
+            <marker id="arrow-in" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <polygon points="0 0, 7 3, 0 6" fill="#1B4B7A" opacity="0.4"/>
+            </marker>
           </defs>
 
-          <!-- Ring 3: Förvaltning -->
           <circle class="ring-3" cx="400" cy="400" r="350"/>
           <text x="400" y="92" class="ring-label" fill="#6B4E8C" text-anchor="middle">FÖRVALTNING</text>
           <text x="400" y="112" class="ring-tools" text-anchor="middle">Coachande NÖHRA-samtal · samråd · centrala stödfunktioner</text>
 
-          <!-- Ring 2: Specialpedagog / Rektor -->
           <circle class="ring-2" cx="400" cy="400" r="270"/>
           <text x="400" y="160" class="ring-label" fill="#E27D60" text-anchor="middle">SPECIALPEDAGOG &amp; REKTOR</text>
           <text x="400" y="180" class="ring-tools" text-anchor="middle">Pedagogisk avstämning · Isbergsmodellen · 7 frågorna</text>
 
-          <!-- Ring 1: Arbetslag -->
           <circle class="ring-1" cx="400" cy="400" r="195"/>
           <text x="400" y="232" class="ring-label" fill="#4A7C59" text-anchor="middle">ARBETSLAG</text>
           <text x="400" y="250" class="ring-tools" text-anchor="middle">Strukturschema · Kontaktbarometern · SKA</text>
 
-          <!-- Centrum: Barnet -->
           <circle class="ring-center" cx="400" cy="400" r="120"/>
           <text x="400" y="375" class="child">BARNET &amp;</text>
           <text x="400" y="400" class="child">BARNGRUPPEN</text>
@@ -154,816 +90,121 @@
           <text x="400" y="455" class="vision-text">"Alla barn ska känna</text>
           <text x="400" y="475" class="vision-text">tilltro till sin förmåga"</text>
 
-          <!-- Inåt-pilar (stöd flödar inåt) -->
           <g stroke="#1B4B7A" stroke-width="1.5" fill="none" opacity="0.4">
             <line x1="170" y1="400" x2="225" y2="400" marker-end="url(#arrow-in)"/>
             <line x1="630" y1="400" x2="575" y2="400" marker-end="url(#arrow-in)"/>
             <line x1="400" y1="170" x2="400" y2="225" marker-end="url(#arrow-in)"/>
             <line x1="400" y1="630" x2="400" y2="575" marker-end="url(#arrow-in)"/>
           </g>
-          <defs>
-            <marker id="arrow-in" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-              <polygon points="0 0, 7 3, 0 6" fill="#1B4B7A" opacity="0.4"/>
-            </marker>
-          </defs>
 
-          <!-- Inåt-text -->
           <text x="105" y="395" class="ring-tools" text-anchor="middle">stöd</text>
           <text x="105" y="410" class="ring-tools" text-anchor="middle">inåt</text>
           <text x="695" y="395" class="ring-tools" text-anchor="middle">stöd</text>
           <text x="695" y="410" class="ring-tools" text-anchor="middle">inåt</text>
 
-          <!-- Årshjuls-text längs båge -->
           <text class="year-label">
             <textPath href="#year-curve" startOffset="2%">
               MAJ · JUN · JUL · AUG · SEP · OKT · NOV · DEC · JAN · FEB · MAR · APR · MAJ · JUN · JUL · AUG · SEP · OKT · NOV · DEC · JAN · FEB · MAR · APR
             </textPath>
           </text>
         </svg>
-
-        <div class="aha-legend">
-          <div class="aha-legend__item">
-            <strong style="color:#1B4B7A">⬤ Centrum</strong>
-            <span>Barnet och barngruppens behov är utgångspunkten — allt annat finns för deras skull.</span>
-          </div>
-          <div class="aha-legend__item">
-            <strong style="color:#4A7C59">⬤ Arbetslaget</strong>
-            <span>Möter barnen varje dag. Använder strukturschema, Kontaktbarometer, SKA-dokumentation.</span>
-          </div>
-          <div class="aha-legend__item">
-            <strong style="color:#E27D60">⬤ Specialpedagog &amp; rektor</strong>
-            <span>Stämmer av med arbetslaget. Pedagogisk avstämning utgår från SKA + de sju frågorna.</span>
-          </div>
-          <div class="aha-legend__item">
-            <strong style="color:#6B4E8C">⬤ Förvaltningen</strong>
-            <span>Möter rektor främjande och förebyggande. Samråd och insats när det behövs.</span>
-          </div>
-          <div class="aha-legend__item">
-            <strong style="color:#E27D60">⬤ Året</strong>
-            <span>Bär processen genom återkommande månadsaktiviteter — strukturschema, Kontaktbarometer, pedagogisk avstämning.</span>
-          </div>
-          <div class="aha-legend__item">
-            <strong style="color:#1B4B7A">⬤ Flödet</strong>
-            <span>Stöd rör sig inåt, information utåt. Inget barn ska "försvinna", inget arbetslag ska stå ensamt.</span>
-          </div>
-        </div>
       </div>
 
-      <div class="callout" style="margin-top:1.5rem">
-        <strong>Hur den ska läsas:</strong> Titta från mitten och ut. Ringarna stöder varandra — den yttre ringen finns för att den innanför ska kunna göra sitt jobb, så att den innanför kan stötta nästa, så att <em>barnet i mitten</em> ska känna tilltro till sin förmåga.
-      </div>
+      <p class="text-muted text-center" style="margin-top:1.5rem; max-width: 60ch; margin-left:auto; margin-right:auto;">
+        Titta från mitten och ut. Den yttre ringen finns för att den innanför ska kunna göra sitt jobb — så att barnet i mitten ska känna tilltro till sin förmåga.
+      </p>
     </div>
   </section>
 
-  <!-- ============================================================
-       PROCESSKARTAN
-       ============================================================ -->
-  <section class="section section--tinted" id="processkarta">
+  <!-- "JAG VILL..." CARDS — entry to the rest -->
+  <section class="section section--tinted" id="jag-vill">
     <div class="container">
-      <span class="section__eyebrow">Den centrala processkartan</span>
-      <h2>Stöd till arbetslag — från barngrupp till huvudman.</h2>
+      <span class="section__eyebrow">Vad vill du göra idag?</span>
+      <h2>Välj din ingång.</h2>
       <p class="section__lead">
-        Processen visualiseras som ett flödesschema med fyra nivåer i styrkedjan. Den horisontella linjen visar förvaltningens centrala stödfunktioner som möter och stöttar arbetet i förskoleområdena. Insatser dokumenteras i arbetslagets SKA och blir en del av deras uppföljning.
+        Varje kort tar dig direkt till det du behöver — utan vägen via tio andra avsnitt. Allt material är fritt att skriva ut, dela eller modifiera.
       </p>
 
-      <div class="processmap">
-        <div class="mermaid">
-flowchart TB
+      <div class="want-grid">
 
-  subgraph LV1["NIVÅ 1 · Barnet och barngruppen"]
-    direction LR
-    B1["Barnets och barngruppens behov<br/><em>utgångspunkt</em>"]
-    B2["Tillgänglig lärmiljö<br/>pedagogisk · social · fysisk"]
-    B3["De sju frågorna<br/>i varje stund"]
-  end
-
-  subgraph LV2["NIVÅ 2 · Arbetslagets ansvar"]
-    direction LR
-    A1["Arbetslaget planerar<br/>undervisningsformer under dagen"]
-    A2["Kontaktbarometern<br/>+ närvaromönster"]
-    A3["Förskolläraren leder<br/>utvecklingssamtal"]
-    A4["Dokumentation i SKA"]
-  end
-
-  subgraph LV3["NIVÅ 3 · Specialpedagog · Rektor · Bitr. rektor"]
-    direction LR
-    S1["Pedagogisk avstämning<br/>utgår från arbetslagets SKA"]
-    S2["De sju frågorna<br/>på vald stund"]
-    S3["Isbergsmodellen<br/>vid behov"]
-  end
-
-  subgraph LV4["NIVÅ 4 · Förvaltningens stöd"]
-    direction LR
-    F1["Bitr. utbildningschef<br/>+ central specialpedagog<br/>möter rektor + ledningsgrupp<br/><b>2 ggr/termin</b>"]
-    F2["Rektor enskild avstämning<br/><b>2 ggr/termin</b>"]
-    F3["Samråd vid behov<br/>+ insats av lämplig profession"]
-  end
-
-  subgraph KO["Kollegialt lärande &amp; studiedagar"]
-    K1["David Edfelt<br/>En förskola för var och en"]
-  end
-
-  B1 --> A1
-  B2 --> A1
-  B3 --> A1
-  A1 --> A4
-  A2 --> A4
-  A3 --> A4
-  A4 --> S1
-  S1 --> S2
-  S1 --> S3
-  S3 --> F3
-  F1 -.->|Coachande<br/>NÖHRA| S1
-  F2 -.-> S1
-  F3 -.->|återkoppling<br/>+ insats| A4
-  K1 -.-> A1
-  K1 -.-> S1
-
-  classDef lv1 fill:#1B4B7A,stroke:#133657,color:#FFFFFF,stroke-width:1.5px;
-  classDef lv2 fill:#4A7C59,stroke:#36593F,color:#FFFFFF,stroke-width:1.5px;
-  classDef lv3 fill:#E27D60,stroke:#B85F45,color:#FFFFFF,stroke-width:1.5px;
-  classDef lv4 fill:#6B4E8C,stroke:#4E3669,color:#FFFFFF,stroke-width:1.5px;
-  classDef ko  fill:#F2B134,stroke:#B8821E,color:#1A2238,stroke-width:1.5px;
-
-  class B1,B2,B3 lv1;
-  class A1,A2,A3,A4 lv2;
-  class S1,S2,S3 lv3;
-  class F1,F2,F3 lv4;
-  class K1 ko;
-
-  click B3 "#nivå-1" "Läs om de sju frågorna"
-  click B2 "#nivå-1" "Tillgänglig lärmiljö"
-  click A2 "mallar/kontaktbarometer.html" "Öppna Kontaktbarometer-mall"
-  click A4 "#nivå-2" "Läs om SKA"
-  click S1 "mallar/pedagogisk-avstamning.html" "Öppna avstämningsprotokoll"
-  click S3 "mallar/isbergsmodellen.html" "Öppna Isbergsmodellen-blankett"
-  click F1 "mallar/nohra-samtal.html" "Öppna NÖHRA-samtalsguide"
-  click F2 "#nivå-4" "Läs om förvaltningens roll"
-  click F3 "#nivå-4" "Läs om samrådsprocessen"
-  click K1 "#verktygslada" "Läs om Edfelts moduler"
-        </div>
-      </div>
-
-      <div class="processmap-legend">
-        <div class="processmap-legend__item"><span class="processmap-legend__swatch" style="background:#1B4B7A"></span> Nivå 1 — Barnet och barngruppen</div>
-        <div class="processmap-legend__item"><span class="processmap-legend__swatch" style="background:#4A7C59"></span> Nivå 2 — Arbetslaget</div>
-        <div class="processmap-legend__item"><span class="processmap-legend__swatch" style="background:#E27D60"></span> Nivå 3 — Specialpedagog / rektor</div>
-        <div class="processmap-legend__item"><span class="processmap-legend__swatch" style="background:#6B4E8C"></span> Nivå 4 — Förvaltning</div>
-        <div class="processmap-legend__item"><span class="processmap-legend__swatch" style="background:#F2B134"></span> Kollegialt lärande</div>
-      </div>
-
-      <hr class="divider">
-
-      <h3 id="nivå-1" style="margin-top:2rem">Nivå 1 — Barnet och barngruppen</h3>
-      <p>
-        <strong>Vi utgår från barnet och barngruppens behov.</strong> Arbetslaget planerar och följer upp hur de erbjuder barngruppen olika undervisningsformer under dagen. Huvudfokus är att <em>de sju frågorna</em> får svar i varje del av dagen.
-      </p>
-      <blockquote>
-        Det är viktigt att alla som ingår i arbetslaget har god förmåga att förstå och samspela med barnen och att skapa tillitsfulla relationer med hemmen, så att förskoletiden blir positiv för barnen.
-        <cite>Lpfö 18 (reviderad 2025)</cite>
-      </blockquote>
-
-      <h3 id="nivå-2" style="margin-top:2rem">Nivå 2 — Arbetslagets ansvar</h3>
-      <p>
-        Arbetslaget bär ansvaret för planering, genomförande och uppföljning. Två återkommande verktyg under året är <strong>Kontaktbarometern</strong> (pedagogiska relationer kartläggs varje pedagog–barn) och uppföljning av <strong>strukturschema för förutsägbarhet</strong>. Förskolläraren håller utvecklingssamtal. Allt dokumenteras i SKA.
-      </p>
-
-      <h3 id="nivå-3" style="margin-top:2rem">Nivå 3 — Specialpedagog och rektor / bitr. rektor</h3>
-      <p>
-        I den <strong>pedagogiska avstämningen</strong> möter specialpedagog och rektor (eller bitr. rektor) arbetslaget. De utgår från arbetslagets SKA och ställer de sju frågorna kopplat till den stund eller aktuella undervisning som arbetslaget fokuserar på. Vid behov används <strong>Isbergsmodellen</strong> för att skifta perspektiv från beteende till bakomliggande behov.
-      </p>
-
-      <h3 id="nivå-4" style="margin-top:2rem">Nivå 4 — Förvaltningens stödfunktioner</h3>
-      <p>
-        Förvaltningen stöttar processerna i förskoleområdena med främjande och förebyggande insats: <strong>biträdande utbildningschef och central specialpedagog möter rektor med ledningsgrupp 2 ggr/termin</strong>. Innehåll: coachande samtal enligt <strong>NÖHRA-modellen</strong>, uppföljning av önskat läge. Rektor har dessutom enskild avstämning 2 ggr/termin.
-      </p>
-      <p>
-        Vid behov av stöttning i processer kontaktas biträdande utbildningschef eller central specialpedagog, och ett <strong>samråd</strong> planeras. Efter samrådet fördelas uppdraget till lämplig profession på förvaltningen. Återkoppling till rektor och vid behov startas insatsen. Samrådet är en förlängning av pedagogisk avstämning — insatsen dokumenteras i arbetslagets SKA och följs upp i nästa pedagogiska avstämning.
-      </p>
-
-      <div class="callout">
-        <strong>Prioriterat mål:</strong> Tillgänglig lärmiljö med tonvikt på <em>pedagogiska relationer</em> (interaktion mellan barn och vuxen). Mäts genom avstämning 2 ggr/år.
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       BERÄTTELSEN — så hänger allt ihop
-       ============================================================ -->
-  <section class="section section--tinted" id="berattelse">
-    <div class="container">
-      <span class="section__eyebrow">Berättelsen — så hänger allt ihop</span>
-      <h2>Möt arbetslaget på avdelning Solrosen.</h2>
-      <p class="section__lead">
-        Karta och årshjul är abstrakta. Här är samma process gestaltad genom ett fiktivt — men sant gestaltat — exempel: ett arbetslags år, från strukturschema i augusti till utvärdering i april. Följ tidslinjen för att se hur nivåerna i styrkedjan stöder varandra i praktiken.
-      </p>
-
-      <div class="story-protagonist">
-        <strong>Avdelning Solrosen.</strong> Förskola i en mellanstor svensk kommun. Tre pedagoger (Anna, Khaled, Petra), 18 barn 3–5 år. Rektor: Linnea. Specialpedagog: Yasmin. Bitr. utbildningschef: Maria. I gruppen finns Adam (4 år) som har svårt med övergångar.
-      </div>
-
-      <div class="story-wrap">
-        <div class="story-scroll">
-
-          <article class="story-card lv-2">
-            <span class="story-card__month">Augusti</span>
-            <h4 class="story-card__title">Arbetslaget gör strukturschemat</h4>
-            <p class="story-card__text">Anna, Khaled och Petra går igenom dagen stund för stund: vad erbjuds, vem ansvarar, hur stöttar vi vid övergångar. Schemat sätts upp på väggen.</p>
-            <div class="story-card__chips">
-              <span class="story-card__chip">Nivå 2 · Arbetslag</span>
-              <a class="story-card__chip is-link" href="#arshjul">Augusti i hjulet</a>
-            </div>
-          </article>
-
-          <article class="story-card lv-2">
-            <span class="story-card__month">September</span>
-            <h4 class="story-card__title">Kontaktbarometern visar ett mönster</h4>
-            <p class="story-card__text">Pedagogerna fyller i Kontaktbarometern. Adam får minus från Khaled, nollor från Anna och Petra. Närvaromönstret visar att han ofta lämnas tidigt och hämtas sent.</p>
-            <div class="story-card__chips">
-              <span class="story-card__chip">Nivå 2 · Arbetslag</span>
-              <a class="story-card__chip is-link" href="mallar/kontaktbarometer.html">Kontaktbarometer-mall</a>
-            </div>
-          </article>
-
-          <article class="story-card lv-3">
-            <span class="story-card__month">Oktober</span>
-            <h4 class="story-card__title">Pedagogisk avstämning kallas in</h4>
-            <p class="story-card__text">Arbetslaget skriver i SKA: "vi når inte Adam vid lunchen". Specialpedagog Yasmin kallar till pedagogisk avstämning. De utgår från lunchstunden och prövar de sju frågorna.</p>
-            <div class="story-card__chips">
-              <span class="story-card__chip">Nivå 3 · Specialpedagog</span>
-              <a class="story-card__chip is-link" href="mallar/pedagogisk-avstamning.html">Avstämningsprotokoll</a>
-            </div>
-          </article>
-
-          <article class="story-card lv-3">
-            <span class="story-card__month">November</span>
-            <h4 class="story-card__title">Isbergsmodellen — vad behöver Adam?</h4>
-            <p class="story-card__text">Vid avstämningen #2 använder Yasmin och rektor Linnea Isbergsmodellen. Ovanför ytan: Adam vägrar sätta sig. Under ytan: ljudnivån, antalet vuxna, han vet inte vem han ska sitta med.</p>
-            <div class="story-card__chips">
-              <span class="story-card__chip">Nivå 3 · Specialpedagog &amp; rektor</span>
-              <a class="story-card__chip is-link" href="mallar/isbergsmodellen.html">Isbergsmodell-blankett</a>
-            </div>
-          </article>
-
-          <article class="story-card lv-2">
-            <span class="story-card__month">December</span>
-            <h4 class="story-card__title">Insatsen påbörjas</h4>
-            <p class="story-card__text">Arbetslaget delar in barnen i tre fasta lunchgrupper. Adam vet vem han sitter med och vem som hjälper. Strukturschemat justeras. Skrivs in i SKA som "lunchstrukturen — pilot".</p>
-            <div class="story-card__chips">
-              <span class="story-card__chip">Nivå 2 · Arbetslag</span>
-              <span class="story-card__chip">SKA-dokumentation</span>
-            </div>
-          </article>
-
-          <article class="story-card lv-3">
-            <span class="story-card__month">Januari</span>
-            <h4 class="story-card__title">Förenklad pedagogisk avstämning</h4>
-            <p class="story-card__text">Arbetslag + Yasmin stämmer av i 30 minuter. Lunchen fungerar för Adam. Nu provar de samma struktur vid påklädning. Sju frågorna ställs igen.</p>
-            <div class="story-card__chips">
-              <span class="story-card__chip">Nivå 3 · Specialpedagog</span>
-              <a class="story-card__chip is-link" href="#arshjul">Januari i hjulet</a>
-            </div>
-          </article>
-
-          <article class="story-card lv-2">
-            <span class="story-card__month">Februari</span>
-            <h4 class="story-card__title">Kontaktbarometern visar förändring</h4>
-            <p class="story-card__text">Adam har gått från minus/nollor till plus från alla tre pedagoger. Två andra barn med liknande mönster är nu i fokus. Insatsen "lunchstrukturen" lyfts till nästa nivå.</p>
-            <div class="story-card__chips">
-              <span class="story-card__chip">Nivå 2 · Arbetslag</span>
-              <a class="story-card__chip is-link" href="mallar/kontaktbarometer.html">Kontaktbarometer-mall</a>
-            </div>
-          </article>
-
-          <article class="story-card lv-4">
-            <span class="story-card__month">Mars</span>
-            <h4 class="story-card__title">NÖHRA-samtal med förvaltningen</h4>
-            <p class="story-card__text">Bitr. utbildningschef Maria och central specialpedagog möter rektor Linnea. NÖHRA: hur sprider vi lärdomen från Solrosens lunchstruktur till andra avdelningar? Plan: workshop på studiedagen i april.</p>
-            <div class="story-card__chips">
-              <span class="story-card__chip">Nivå 4 · Förvaltning</span>
-              <a class="story-card__chip is-link" href="mallar/nohra-samtal.html">NÖHRA-samtalsguide</a>
-            </div>
-          </article>
-
-          <article class="story-card lv-1">
-            <span class="story-card__month">April</span>
-            <h4 class="story-card__title">Utvärdering — barnens upplevelse</h4>
-            <p class="story-card__text">Adam står i hallen och ropar "Khaled, var ska jag sitta?". Han har språket för att fråga, han vet att det finns ett svar. På Solrosen är "lunchstrukturen" nu en del av <em>hur de gör förskola</em>.</p>
-            <div class="story-card__chips">
-              <span class="story-card__chip">Nivå 1 · Barnet</span>
-              <span class="story-card__chip">Vision uppnådd</span>
-            </div>
-          </article>
-
-        </div>
-        <p class="story-scroll-hint">← scrolla i sidled för hela året →</p>
-      </div>
-
-      <div class="story-result">
-        <h3>Vad hände egentligen?</h3>
-        <p>
-          Inget steg i sig var revolutionerande. Arbetslaget gjorde det de alltid gjort. Specialpedagogen ledde ett standardmöte. Rektorn coachade. Bitr. utbildningschefen pratade med rektorn. Men <strong>varje nivå visste sin roll, varje verktyg fanns på sin plats, och informationen flödade både inåt (stöd) och utåt (lärdom)</strong>. Det är hela poängen med Mariaskarta: att göra det självklara <em>synligt</em>, så att det kan upprepas.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       ÅRSHJULET
-       ============================================================ -->
-  <section class="section" id="arshjul">
-    <div class="container">
-      <span class="section__eyebrow">Året som rytm</span>
-      <h2>Årshjul för processen — klicka på en månad.</h2>
-      <p class="section__lead">
-        Årshjulet visar de konkreta insatserna månad för månad: när strukturschemat planeras, när Kontaktbarometern utförs, när den förenklade pedagogiska avstämningen sker och när utvärderingen görs. Klicka på en sektor för att se månadens detaljer.
-      </p>
-
-      <div class="yearwheel-wrap">
-        <figure class="yearwheel-figure" aria-label="Interaktivt årshjul">
-          <svg id="yearwheel-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="false"></svg>
-        </figure>
-
-        <aside class="month-detail" id="month-detail" aria-live="polite">
-          <!-- Fylls dynamiskt av app.js -->
-        </aside>
-      </div>
-
-      <div class="callout" style="margin-top: 2rem;">
-        <strong>Tips:</strong> Årshjulet börjar i <em>Maj</em> eftersom planeringsstarten ligger där. Klicka på vilken månad som helst för att se de planerade aktiviteterna.
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       KOMMUNIKATIONSPLAN
-       ============================================================ -->
-  <section class="section section--tinted" id="kommunikation">
-    <div class="container">
-      <span class="section__eyebrow">Kommunikation av förändringen</span>
-      <h2>Så införs processen — kommunikationsplan till rektorerna.</h2>
-      <p class="section__lead">
-        Kommunikationen följer Kotters åtta steg som <em>strategisk grund</em>, kompletterad med ADKAR-modellen som <em>budskap till varje rektor</em>: vad de ska bli medvetna om, vilja och kunna göra. Två ramverk som inte utesluter varandra utan kompletterar.
-      </p>
-
-      <h3>De åtta stegen — anpassade till denna förändring</h3>
-
-      <div class="commsteps">
-
-        <article class="commstep">
-          <span class="commstep__num">1</span>
-          <h4>Skapa angelägenhet</h4>
-          <p>Inled samordningsmöte med varför detta behövs nu: Lpfö 18 reviderad 2025 förtydligar likvärdighet och arbetslagets gemensamma ansvar. Eidevalds rapport pekar på kvalitetstapp i utsatta områden.</p>
-          <div class="commstep__meta">
-            <span class="commstep__chip">Kanal: Samordningsmöte</span>
-            <span class="commstep__chip">Tid: T-12 v.</span>
+        <a class="want-card" href="berattelse.html">
+          <div class="want-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
           </div>
-        </article>
+          <h3>Förstå hur det hänger ihop</h3>
+          <p class="want-card__intro">Möt arbetslaget på avdelning Solrosen och följ deras år. Konkret berättelse som visar hur karta och årshjul knyts ihop i praktiken.</p>
+          <span class="want-card__cta">Läs berättelsen</span>
+        </a>
 
-        <article class="commstep">
-          <span class="commstep__num">2</span>
-          <h4>Bygg en styrande koalition</h4>
-          <p>Identifiera nyckelrektorer + central specialpedagog som tidiga ambassadörer. Dessa testkör en pilot på sin enhet och blir referenser i den breda utrullningen.</p>
-          <div class="commstep__meta">
-            <span class="commstep__chip">Kanal: Workshop · 2&nbsp;tim</span>
-            <span class="commstep__chip">Tid: T-10 v.</span>
+        <a class="want-card is-purple" href="karta.html">
+          <div class="want-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="4" rx="1"/><rect x="15" y="3" width="6" height="4" rx="1"/><rect x="3" y="17" width="6" height="4" rx="1"/><rect x="15" y="17" width="6" height="4" rx="1"/><path d="M6 7v4h12v4M9 19h6"/></svg>
           </div>
-        </article>
+          <h3>Se den centrala kartan</h3>
+          <p class="want-card__intro">Processkartan i Mermaid med alla fyra nivåer i styrkedjan. Klickbara noder som hoppar direkt till mallar och förklaringar.</p>
+          <span class="want-card__cta">Öppna kartan</span>
+        </a>
 
-        <article class="commstep">
-          <span class="commstep__num">3</span>
-          <h4>Forma visionen</h4>
-          <p>Använd Marias vision: <em>"Alla barn ska känna tilltro till sin förmåga som en lärande individ."</em> Visualisera processkartan som en enda bild. Vision i ord, karta i bild.</p>
-          <div class="commstep__meta">
-            <span class="commstep__chip">Kanal: A3-poster</span>
-            <span class="commstep__chip">Tid: T-8 v.</span>
+        <a class="want-card is-accent" href="arshjul.html">
+          <div class="want-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l5 3"/></svg>
           </div>
-        </article>
+          <h3>Planera årets aktiviteter</h3>
+          <p class="want-card__intro">Interaktivt årshjul. Klicka på en månad och se exakt vilka insatser arbetslaget ska göra — strukturschema, Kontaktbarometer, avstämning.</p>
+          <span class="want-card__cta">Öppna årshjulet</span>
+        </a>
 
-        <article class="commstep">
-          <span class="commstep__num">4</span>
-          <h4>Kommunicera visionen</h4>
-          <p>Tre forum: samordningsmöten (diskussion), Rektor i fokus (fördjupning), Christian Eidevalds rapport som gemensam läsning. Mariaskarta-länken delas i varje forum.</p>
-          <div class="commstep__meta">
-            <span class="commstep__chip">Kanal: Tre kanaler</span>
-            <span class="commstep__chip">Tid: T-6 till T-2 v.</span>
+        <a class="want-card is-leaf" href="mallar/index.html">
+          <div class="want-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>
           </div>
-        </article>
+          <h3>Skriv ut en mall</h3>
+          <p class="want-card__intro">Fyra A4-mallar färdiga att fylla i: pedagogisk avstämning, Isbergsmodellen, Kontaktbarometer, NÖHRA-samtalsguide. Optimerade för print/PDF.</p>
+          <span class="want-card__cta">Visa mallarna</span>
+        </a>
 
-        <article class="commstep">
-          <span class="commstep__num">5</span>
-          <h4>Möjliggör handling</h4>
-          <p>Ge rektorer mallar: pedagogisk avstämning-protokoll, Isbergsmodell-blankett, kontaktbarometer-mall. Specialpedagog tillgänglig för konsultation. Hinder undanröjs aktivt.</p>
-          <div class="commstep__meta">
-            <span class="commstep__chip">Kanal: Verktygslåda</span>
-            <span class="commstep__chip">Tid: T-2 v.</span>
+        <a class="want-card" href="verktyg.html">
+          <div class="want-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a3 3 0 0 0-4.2 0L3 14l3 3 7.7-7.5a3 3 0 0 0 0-3.2zM13 11l5 5 3-3-5-5"/></svg>
           </div>
-        </article>
+          <h3>Använda ett pedagogiskt verktyg</h3>
+          <p class="want-card__intro">Tolv begrepp och ramverk förklarade — Lpfö 18 rev 2025, SPSM tillgänglighetsmodell, NÖHRA, Isberg, de sju frågorna — med källor.</p>
+          <span class="want-card__cta">Öppna verktygslådan</span>
+        </a>
 
-        <article class="commstep">
-          <span class="commstep__num">6</span>
-          <h4>Skapa tidiga framgångar</h4>
-          <p>Pilotrektorerna delar konkreta resultat efter första Kontaktbarometern: hur många barn med minus-/nollor flyttades till plus. Synliga vinster i siffror.</p>
-          <div class="commstep__meta">
-            <span class="commstep__chip">Kanal: Samordningsmöte</span>
-            <span class="commstep__chip">Tid: T+8 v.</span>
+        <a class="want-card is-purple" href="kommunikation.html">
+          <div class="want-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"/></svg>
           </div>
-        </article>
+          <h3>Förbereda kommunikation till rektorer</h3>
+          <p class="want-card__intro">Kommunikationsplan i Kotters åtta steg + ADKAR-modellen. Inklusive svar på tre troliga invändningar.</p>
+          <span class="want-card__cta">Visa planen</span>
+        </a>
 
-        <article class="commstep">
-          <span class="commstep__num">7</span>
-          <h4>Konsolidera och bygg vidare</h4>
-          <p>Efter termin 1: utvärdera processkartan med rektorsgruppen. Justera årshjulet baserat på vad som fungerade. Lägg till nästa lager — t.ex. fördjupning på David Edfelts moduler.</p>
-          <div class="commstep__meta">
-            <span class="commstep__chip">Kanal: Heldagsworkshop</span>
-            <span class="commstep__chip">Tid: T+20 v.</span>
+        <a class="want-card is-saffron" href="promptar.html">
+          <div class="want-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 5.5L20 11l-5.6 2.5L12 19l-2.4-5.5L4 11l5.6-2.5L12 3z"/><path d="M18.5 16l.7 1.5 1.5.7-1.5.7-.7 1.5-.7-1.5-1.5-.7 1.5-.7zM4 4l.6 1.3L6 6l-1.4.7L4 8l-.6-1.3L2 6l1.4-.7z"/></svg>
           </div>
-        </article>
+          <h3>Få AI som assistent</h3>
+          <p class="want-card__intro">Fem färdiga prompts på svenska + systemprompt för Claude Project. GDPR-vägledning för svenska kommuner.</p>
+          <span class="want-card__cta">Visa promptarna</span>
+        </a>
 
-        <article class="commstep">
-          <span class="commstep__num">8</span>
-          <h4>Förankra i kulturen</h4>
-          <p>Processen blir hur vi <em>gör förskola</em>, inte ett tillfälligt projekt. Skrivs in i förvaltningens systematiska kvalitetsarbete och presenteras för nya rektorer som standard.</p>
-          <div class="commstep__meta">
-            <span class="commstep__chip">Kanal: SKA + intro</span>
-            <span class="commstep__chip">Tid: Löpande</span>
+        <a class="want-card" href="kallor.html">
+          <div class="want-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7a3 3 0 0 1 3 3v14a2 2 0 0 0-2-2H4z"/><path d="M20 4h-7a3 3 0 0 0-3 3v14a2 2 0 0 1 2-2h8z"/></svg>
           </div>
-        </article>
+          <h3>Hitta källor och underlag</h3>
+          <p class="want-card__intro">Verifierbar referensförteckning — Skolverket, SPSM, IMY, David Edfelt, Eidevalds rapport och mer.</p>
+          <span class="want-card__cta">Visa källor</span>
+        </a>
 
       </div>
 
-      <h3 style="margin-top:3rem">ADKAR — vad varje rektor behöver för att lyckas</h3>
-      <p>Använd som checklista i samtal med enskild rektor. Hen behöver alla fem för att klara förändringen.</p>
-
-      <div class="adkar-grid">
-        <div>
-          <h4><span>A</span> Awareness</h4>
-          <p>Medvetenhet om <em>varför</em> just nu: ny läroplan, kvalitetstapp, behov av tydlig styrkedja.</p>
-        </div>
-        <div>
-          <h4><span>D</span> Desire</h4>
-          <p>Vilja att delta: tydliggör vinsten — mindre brand­släckning, fler barn som mår bra, lättare SKA-arbete.</p>
-        </div>
-        <div>
-          <h4><span>K</span> Knowledge</h4>
-          <p>Kunskap om hur: kartan, verktygen, mallarna. Studiedag + Mariaskarta som referens.</p>
-        </div>
-        <div>
-          <h4><span>A</span> Ability</h4>
-          <p>Förmåga att tillämpa: stöd från central specialpedagog, kollegialt lärande, första pedagogiska avstämning tillsammans.</p>
-        </div>
-        <div>
-          <h4><span>R</span> Reinforcement</h4>
-          <p>Förstärkning: NÖHRA-samtal 2 ggr/termin, tidiga framgångar synliggörs, processen blir kultur.</p>
-        </div>
-      </div>
-
-      <div class="callout callout--warn" style="margin-top:2.5rem">
-        <strong>Troliga invändningar från rektorer — och svar:</strong>
-        <ul style="margin-top:0.5em">
-          <li><strong>"Vi har redan för mycket att göra."</strong> &nbsp;→ &nbsp;Processen ersätter brandsläckning. Pedagogisk avstämning är inte extra — den är förstärkning av det ni redan gör i SKA.</li>
-          <li><strong>"Mitt arbetslag är inte moget för Isbergsmodellen."</strong> &nbsp;→ &nbsp;Den används bara vid behov. Vi börjar med Kontaktbarometern och de sju frågorna.</li>
-          <li><strong>"Vi har egen modell som fungerar."</strong> &nbsp;→ &nbsp;Mariaskarta är ramen — er modell ryms inom den. Det vi vill ha gemensamt är språket och rutinen för avstämning uppåt i styrkedjan.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       VERKTYGSLÅDAN
-       ============================================================ -->
-  <section class="section" id="verktygslada">
-    <div class="container">
-      <span class="section__eyebrow">Pedagogisk verktygslåda</span>
-      <h2>Begreppen, ramverken och metoderna — med källor.</h2>
-      <p class="section__lead">
-        Allt som processkartan vilar på, samlat på en plats. Använd som referens i samtal med rektorer, som inspiration vid utbildningsdagar, eller som länksamling när du själv eller någon i ditt team vill fördjupa sig.
-      </p>
-
-      <div class="tool-grid">
-
-        <article class="tool">
-          <h3>De sju frågorna <small>Tydliggörande pedagogik</small></h3>
-          <p>Vad? · Var? · När? · Hur? · Med vem? · Hur länge? · Varför? Bygger på KASAM (begriplighet, hanterbarhet, meningsfullhet).</p>
-          <div class="tool__use"><strong>Används av:</strong> arbetslag i planering av varje stund; specialpedagog i pedagogisk avstämning.</div>
-          <p class="tool__source">Källa: <a href="https://www.spsm.se/studiepaket-npf/studiepaket-npf-forskola/tydliggorande-pedagogik-i-forskolan/moment-1--tydliggorande-pedagogik-i-forskolan/">SPSM Studiepaket NPF — moment 1</a></p>
-        </article>
-
-        <article class="tool">
-          <h3>Kontaktbarometern <small>Veckorutin</small></h3>
-          <p>Varje pedagog markerar för varje barn: <strong>+</strong> positiv kontakt, <strong>−</strong> negativ kontakt eller tillsägelse, <strong>0</strong> ingen kontakt. Diskuteras i arbetslaget.</p>
-          <div class="tool__use"><strong>Används av:</strong> arbetslaget varje vecka; resultat kopplas till närvaromönster.</div>
-          <a class="tool__mall" href="mallar/kontaktbarometer.html">Öppna mall</a>
-          <p class="tool__source">Källa: <a href="https://www.vilarare.se/fritidspedagogik/sa-gor-vi/ida-mari-haller-koll-med-en-kontaktbarometer/">Vi Lärare — Ida-Mari</a></p>
-        </article>
-
-        <article class="tool">
-          <h3>NÖHRA-modellen <small>Coachande samtal</small></h3>
-          <p><strong>N</strong>uläge · <strong>Ö</strong>nskat läge · <strong>H</strong>inder · <strong>R</strong>esurser · <strong>A</strong>ktiviteter. Lösningsfokuserad sortering.</p>
-          <div class="tool__use"><strong>Används av:</strong> biträdande utbildningschef + central specialpedagog i möten med rektor; rektor i samtal med arbetslag.</div>
-          <a class="tool__mall" href="mallar/nohra-samtal.html">Öppna samtalsguide</a>
-          <p class="tool__source">Källa: <a href="https://interactcom.se/nohra">InterACT</a> · <a href="https://kraftochbalans.com/nohra-modell-for-samtal/">Kraft &amp; Balans</a></p>
-        </article>
-
-        <article class="tool">
-          <h3>Isbergsmodellen <small>Perspektivskifte</small></h3>
-          <p>Ovanför ytan: <em>observerbart beteende</em>. Under ytan: <em>bakomliggande behov, känslor, sammanhang.</em> Av Anna Hellberg Björklund.</p>
-          <div class="tool__use"><strong>Används av:</strong> rektor/bitr. rektor i pedagogisk avstämning; dokumenteras på papper.</div>
-          <a class="tool__mall" href="mallar/isbergsmodellen.html">Öppna blankett</a>
-          <p class="tool__source">Källa: <a href="https://forskoleforum.se/serier/isbergsmodellen">Förskoleforum — Isbergsmodellen</a></p>
-        </article>
-
-        <article class="tool">
-          <h3>Pedagogisk avstämning <small>Mötesprotokoll</small></h3>
-          <p>Strukturerat möte mellan arbetslag, specialpedagog och rektor. Utgår från SKA, ställer de sju frågorna på en vald stund. Rollfördelning + uppföljning.</p>
-          <div class="tool__use"><strong>Används av:</strong> nivå 3, kontinuerligt under året.</div>
-          <a class="tool__mall" href="mallar/pedagogisk-avstamning.html">Öppna protokoll</a>
-          <p class="tool__source">Tillämpas i kombination med Isbergsmodellen vid behov.</p>
-        </article>
-
-        <article class="tool">
-          <h3>SPSM:s tillgänglighetsmodell <small>Lärmiljö</small></h3>
-          <p>Tre dimensioner: <strong>pedagogisk</strong> (planering, undervisning, lärverktyg), <strong>social</strong> (tillhörighet, autonomi, trygghet), <strong>fysisk</strong> (ljudmiljö, visuell miljö, inne/ute).</p>
-          <div class="tool__use"><strong>Används av:</strong> arbetslag som kartläggningsram innan eskalering uppåt.</div>
-          <p class="tool__source">Källa: <a href="https://www.spsm.se/stodmaterial-for-tillganglig-utbildning/tillganglig-utbildning/tillganglighetsmodellen-fran-spsm/">SPSM Tillgänglighetsmodellen</a></p>
-        </article>
-
-        <article class="tool">
-          <h3>SKA <small>Systematiskt kvalitetsarbete</small></h3>
-          <p>Skolverkets fyra faser: <em>Var är vi? → Vart ska vi? → Hur gör vi? → Hur blev det?</em> Lagstadgat (skollagen 4 kap). Rektor ansvarig på enhetsnivå.</p>
-          <div class="tool__use"><strong>Används av:</strong> arbetslaget kontinuerligt; alla insatser dokumenteras här.</div>
-          <p class="tool__source">Källa: <a href="https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ansvar-for-systematiskt-kvalitetsarbete">Skolverket</a></p>
-        </article>
-
-        <article class="tool">
-          <h3>Före Bornholm <small>Språkutveckling</small></h3>
-          <p>25 språksamlingar för 2–6 år av Görel Sterner &amp; Ingvar Lundberg. Systematiska språklekar som förebygger lässvårigheter. Kan vara basen i temat/projektet.</p>
-          <div class="tool__use"><strong>Används av:</strong> arbetslag som tema/projektmaterial.</div>
-          <p class="tool__source">Källa: <a href="https://www.nok.se/titlar/laromedel-b1/fore-bornholmsmodellen---spraklekar-i-forskolan/">Natur &amp; Kultur</a> · <a href="https://bornholmsmodellen.se/material-3/">bornholmsmodellen.se</a></p>
-        </article>
-
-        <article class="tool">
-          <h3>En förskola för var och en <small>David Edfelt</small></h3>
-          <p>Webbutbildning, 8 moduler (2 bas + 5 fördjupning): autism, ADHD, språkstörning m.fl. Kollegialt lärande i arbetslaget.</p>
-          <div class="tool__use"><strong>Används av:</strong> kollegiala forum + studiedagar.</div>
-          <p class="tool__source">Källa: <a href="https://psykologdavid.se/kursdemo_en_forskola/">psykologdavid.se</a> · <a href="https://larportalen.skolverket.se/moduler/M118/5">Skolverkets Lärportal</a></p>
-        </article>
-
-        <article class="tool">
-          <h3>Lpfö 18 (rev 2025) <small>Styrdokument</small></h3>
-          <p>Gäller från 1 juli 2025. Skärpt rektorsansvar för vetenskaplig grund. Tydligare arbetslagsansvar. Likvärdighet centralt.</p>
-          <div class="tool__use"><strong>Citatvänligt:</strong> "Utbildningen ska vara likvärdig oavsett var i landet den anordnas."</div>
-          <p class="tool__source">Källa: <a href="https://www.skolverket.se/sok-publikationer/publikationsserier/styrdokument/2025/laroplan-for-forskolan---lpfo-18-reviderad-2025">Skolverket — Lpfö 18 rev 2025</a></p>
-        </article>
-
-        <article class="tool">
-          <h3>Eidevalds rapport <small>Rätt start i livet (2024)</small></h3>
-          <p>Fem rekommendationer: färre tydligare mål, stärkt pedagogiskt ledarskap, stöd framför kontroll, uppföljning av barnens upplevelser, nationell kunskapsstruktur.</p>
-          <div class="tool__use"><strong>Används av:</strong> som strategisk ram + diskussionsunderlag på samordningsmöten.</div>
-          <p class="tool__source">Källa: <a href="https://forskoleforum.se/amnen/organisation/kvalitet-och-dokumentation/ratt-start-i-livet-sa-lyfter-vi-svensk-forskola">Förskoleforum sammanfattning</a></p>
-        </article>
-
-        <article class="tool">
-          <h3>Nationellt kvalitetssystem <small>Skolverket</small></h3>
-          <p>Nationella mål, delmål, indikatorer, framgångsfaktorer. Kvalitetsdialoger mellan Skolverket/SPSM och huvudmän. Närvaro är central indikator.</p>
-          <div class="tool__use"><strong>Används av:</strong> förvaltning som ram för aggregerat kvalitetsarbete.</div>
-          <p class="tool__source">Källa: <a href="https://www.skolverket.se/skolutveckling/kvalitetsarbete/nationellt-kvalitetssystem">Skolverket</a></p>
-        </article>
-
-        <article class="tool">
-          <h3>Rektor i fokus / Rektorsprogrammet <small>Kompetens</small></h3>
-          <p>Obligatoriskt 30 hp för nya rektorer (inkl. förskolerektorer): skoljuridik, styrning, pedagogiskt ledarskap. Måste påbörjas inom 5 år.</p>
-          <div class="tool__use"><strong>Används av:</strong> diskussionsfrågor på samordningsmöten, leds av samordnare.</div>
-          <p class="tool__source">Källa: <a href="https://www.skolverket.se/kompetensutveckling/kurser-och-utbildningar/rektorsprogrammet">Skolverket — Rektorsprogrammet</a></p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       AI-PROMPTAR
-       ============================================================ -->
-  <section class="section section--dark" id="promptar">
-    <div class="container">
-      <span class="section__eyebrow">AI-promptar — färdiga att kopiera</span>
-      <h2>Använd AI som assistent — på svenska, säkert, med stil.</h2>
-      <p class="section__lead">
-        Fyra färdiga prompts utformade för biträdande förskolechefs återkommande uppgifter: skapa processkartor i Mermaid, strukturera ostrukturerade anteckningar, planera kommunikation och förbereda coachande samtal. Klistra in i Claude.ai, ChatGPT eller motsvarande godkänt verktyg.
-      </p>
-
-      <div class="callout callout--warn">
-        <strong>GDPR-tips:</strong> Skicka <em>aldrig</em> personuppgifter om barn, vårdnadshavare eller personal till AI-verktyg utan rättslig grund och DPIA. Anonymisera alltid innan inklistring. Kontrollera med kommunens dataskyddsombud vilket verktyg som har giltigt PUB-avtal. Microsoft 365 Copilot är ofta säkrast om kommunen redan har M365.
-      </div>
-
-      <!-- PROMPT 1 -->
-      <article class="prompt">
-        <header class="prompt__head">
-          <div>
-            <h3 class="prompt__title">1. Skapa processkarta i Mermaid</h3>
-            <p class="prompt__desc">Generera en redigerbar processkarta från en textbeskrivning.</p>
-          </div>
-        </header>
-        <div class="prompt__body">
-          <button class="prompt__copy" data-target="prompt-1" type="button">Kopiera prompt</button>
-<pre><code id="prompt-1">Agera som expert på processkartläggning inom svensk kommunal förskoleverksamhet. Jag beskriver en process nedan i fri text. Din uppgift är att:
-
-1. Identifiera alla steg, beslutspunkter och ansvariga roller.
-2. Generera processen som ett flödesschema i Mermaid-syntax (flowchart TD).
-3. Använd svenska för alla noder, tydliga verb i imperativ.
-4. Markera beslutspunkter med romber och ansvariga med parenteser, t.ex. "Granska ansökan (Rektor)".
-5. Efter koden: ge en kort lista över otydligheter i min beskrivning som jag bör förtydliga.
-
-Processbeskrivning: [KLISTRA IN DIN TEXT HÄR]</code></pre>
-        </div>
-      </article>
-
-      <!-- PROMPT 2 -->
-      <article class="prompt">
-        <header class="prompt__head">
-          <div>
-            <h3 class="prompt__title">2. Strukturera ostrukturerade anteckningar</h3>
-            <p class="prompt__desc">Förvandla råa mötesanteckningar till ett formellt processdokument.</p>
-          </div>
-        </header>
-        <div class="prompt__body">
-          <button class="prompt__copy" data-target="prompt-2" type="button">Kopiera prompt</button>
-<pre><code id="prompt-2">Agera som expert på verksamhetsutveckling och dokumentation inom svensk förskola. Nedan finns mina råa anteckningar från ett möte/observation. Strukturera dem till ett formellt processdokument med följande delar:
-
-1. Syfte och omfattning
-2. Roller och ansvar
-3. Processteg i ordning (numrerade)
-4. Beslutspunkter och eskaleringsvägar
-5. Dokumentation och uppföljning
-6. Öppna frågor som behöver klargöras
-
-Behåll alla sakuppgifter, men formulera om till tydligt myndighetsspråk. Hitta inte på uppgifter som saknas — markera dem istället som [att klargöra].
-
-Anteckningar: [KLISTRA IN HÄR]</code></pre>
-        </div>
-      </article>
-
-      <!-- PROMPT 3 -->
-      <article class="prompt">
-        <header class="prompt__head">
-          <div>
-            <h3 class="prompt__title">3. Kommunikationsplan för förändring</h3>
-            <p class="prompt__desc">Skapar en komplett plan i Kotters 8 steg + ADKAR-modellen.</p>
-          </div>
-        </header>
-        <div class="prompt__body">
-          <button class="prompt__copy" data-target="prompt-3" type="button">Kopiera prompt</button>
-<pre><code id="prompt-3">Agera som expert på förändringsledning inom svensk skolförvaltning, med särskild kunskap om Kotters 8 steg och ADKAR-modellen. Jag ska införa följande förändring för rektorerna i min förvaltning: [BESKRIV FÖRÄNDRINGEN].
-
-Skapa en kommunikationsplan som:
-
-1. Sammanfattar förändringen i en mening (elevator pitch).
-2. Identifierar målgrupper (rektorer, biträdande, pedagoger, vårdnadshavare).
-3. För varje Kotter-steg (1–8): konkret kommunikationsaktivitet, kanal, ansvarig och tidpunkt.
-4. För varje ADKAR-fas: vilken känsla/insikt vi vill väcka och hur vi mäter att den nåtts.
-5. Föreslå 3 troliga invändningar från rektorer och förslag på svar.
-
-Använd professionell svenska anpassad för kommunal utbildningsförvaltning.</code></pre>
-        </div>
-      </article>
-
-      <!-- PROMPT 4 -->
-      <article class="prompt">
-        <header class="prompt__head">
-          <div>
-            <h3 class="prompt__title">4. Förbered coachande samtal med NÖHRA</h3>
-            <p class="prompt__desc">Hjälper dig hålla en lösningsfokuserad samtalsstruktur med rektor.</p>
-          </div>
-        </header>
-        <div class="prompt__body">
-          <button class="prompt__copy" data-target="prompt-4" type="button">Kopiera prompt</button>
-<pre><code id="prompt-4">Agera som erfaren ledarcoach som arbetar enligt NÖHRA-modellen (Nuläge, Önskat läge, Hinder, Resurser, Aktiviteter). Jag ska ha ett coachande samtal med en rektor om följande situation: [BESKRIV KORT, ANONYMISERAT].
-
-Förbered samtalet genom att ge mig:
-
-1. En kort hypotes om vad som kan ligga bakom situationen.
-2. 4–6 öppna, icke-dömande frågor för varje NÖHRA-steg (totalt 20–30 frågor).
-3. Tips på hur jag undviker att gå in i rådgivar- eller chefsrollen.
-4. Förslag på hur jag avslutar samtalet med en konkret handlingsplan ägd av rektorn själv.
-5. Varningssignaler under samtalet som indikerar att jag bör byta spår eller pausa.
-
-Använd svenska och en varm, professionell ton.</code></pre>
-        </div>
-      </article>
-
-      <!-- BONUS PROMPT 5: Specialiserad system-prompt för Claude Project -->
-      <article class="prompt">
-        <header class="prompt__head">
-          <div>
-            <h3 class="prompt__title">5. System-prompt för Claude Project / Custom GPT</h3>
-            <p class="prompt__desc">Sätt upp en återanvändbar AI-assistent specialiserad på svensk förskolepedagogik. Klistra in som "system instructions" / "custom instructions".</p>
-          </div>
-        </header>
-        <div class="prompt__body">
-          <button class="prompt__copy" data-target="prompt-5" type="button">Kopiera prompt</button>
-<pre><code id="prompt-5">Du är en erfaren rådgivare specialiserad på svensk förskolepedagogik och kommunal utbildningsförvaltning. Du stödjer en biträdande förskolechef i strategiskt, pedagogiskt och kommunikativt arbete.
-
-KONTEXT
-- Användarens roll: biträdande förskolechef på utbildningsförvaltning, ansvarig för stöd till rektorer och arbetslag.
-- Verksamhet: kommunal förskola i Sverige.
-- Centrala styrdokument: Lpfö 18 reviderad 2025, Skollagen 4 kap (SKA).
-
-EXPERTOMRÅDEN
-Du är förtrogen med:
-- Lpfö 18 rev 2025 och dess skärpta rektorsansvar och arbetslagsansvar.
-- SKA — systematiskt kvalitetsarbete och Skolverkets fyra faser.
-- SPSM:s tillgänglighetsmodell (pedagogisk, social, fysisk lärmiljö).
-- De sju frågorna inom tydliggörande pedagogik.
-- Kontaktbarometern — verktyg för pedagogiska relationer i arbetslag.
-- Isbergsmodellen (Anna Hellberg Björklund) i pedagogisk avstämning.
-- NÖHRA-modellen för coachande samtal.
-- David Edfelts moduler "En förskola för var och en".
-- Christian Eidevalds rapport "Rätt start i livet" (2024).
-- Nationellt kvalitetssystem och kvalitetsdialoger.
-- Kotter's 8 steg och ADKAR-modellen för förändringsledning.
-
-STIL OCH TON
-- Skriv på korrekt, professionell svenska för kommunal utbildningsförvaltning.
-- Använd korrekt terminologi: rektor, huvudman, undervisning, utbildning, vårdnadshavare, arbetslag.
-- Undvik anglicismer; använd svenska motsvarigheter när de finns.
-- Var konkret, lösningsorienterad och varm.
-- Håll svar fokuserade — inte mer än frågan kräver.
-
-VAD DU INTE GÖR
-- Behandlar inte personuppgifter om enskilda barn, vårdnadshavare eller personal.
-- Ger inga diagnostiska bedömningar av barn.
-- Hittar inte på källor — om jag refererar till något du inte säkert känner till, säg det och be om förtydligande.
-
-NÄR JAG STÄLLER FRÅGA
-1. Klargör om frågan är otydlig.
-2. Ge konkret, strukturerat svar med rubriker och punktlistor när det passar.
-3. Hänvisa till relevanta styrdokument eller källor när det är värdefullt.
-4. Avsluta gärna med en följdfråga eller ett konkret nästa steg.</code></pre>
-        </div>
-      </article>
-
-      <div class="callout" style="margin-top:2rem; background:rgba(242,177,52,0.15); border-left-color:#F2B134; color:#FFFFFF;">
-        <strong style="color:#FFFFFF">Pro-tips:</strong> Spara prompt #5 som <em>system instructions</em> i en <strong>Claude Project</strong> (Claude.ai Pro) eller <strong>Custom GPT</strong> (ChatGPT Plus). Ladda upp Lpfö 18 rev 2025 + kommunens egna riktlinjer som projekt-filer. Då har du en återanvändbar specialiserad assistent som alltid är "påläst" när du börjar en ny chatt.
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================================
-       KÄLLOR
-       ============================================================ -->
-  <section class="section" id="kallor">
-    <div class="container">
-      <span class="section__eyebrow">Källor &amp; vidare läsning</span>
-      <h2>Allt som processkartan vilar på — verifierbart.</h2>
-      <p class="section__lead">
-        Mariaskarta är byggd på offentliga källor från Skolverket, SPSM och etablerade pedagogiska auktoriteter. Här är hela referensförteckningen, för att verifiera, citera och fördjupa.
-      </p>
-
-      <div class="sources">
-        <h3>Styrdokument och myndigheter</h3>
-        <ul>
-          <li><a href="https://www.skolverket.se/sok-publikationer/publikationsserier/styrdokument/2025/laroplan-for-forskolan---lpfo-18-reviderad-2025">Skolverket — Lpfö 18 reviderad 2025</a></li>
-          <li><a href="https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ansvar-for-systematiskt-kvalitetsarbete">Skolverket — Ansvar för SKA</a></li>
-          <li><a href="https://www.skolverket.se/skolutveckling/kvalitetsarbete/nationellt-kvalitetssystem">Skolverket — Nationellt kvalitetssystem</a></li>
-          <li><a href="https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/rektorns-ansvar">Skolverket — Rektorns ansvar</a></li>
-          <li><a href="https://www.skolverket.se/kompetensutveckling/kurser-och-utbildningar/rektorsprogrammet">Skolverket — Rektorsprogrammet</a></li>
-          <li><a href="https://www.skolverket.se/kompetensutveckling/stod-i-arbetet/rad-om-ai-chattbottar-och-liknande-verktyg">Skolverket — Råd om AI och chattbottar</a></li>
-          <li><a href="https://www.spsm.se/studiepaket-npf/studiepaket-npf-forskola/tydliggorande-pedagogik-i-forskolan/moment-1--tydliggorande-pedagogik-i-forskolan/">SPSM Studiepaket NPF förskola — Tydliggörande pedagogik &amp; de sju frågorna</a></li>
-          <li><a href="https://www.spsm.se/stodmaterial-for-tillganglig-utbildning/tillganglig-utbildning/tillganglighetsmodellen-fran-spsm/">SPSM — Tillgänglighetsmodellen</a></li>
-          <li><a href="https://www.imy.se/verksamhet/dataskydd/dataskydd-pa-olika-omraden/skola-och-forskola/for-personuppgiftsansvariga-inom-skola-och-forskola">IMY — Dataskydd för skola och förskola</a></li>
-        </ul>
-
-        <h3>Pedagogiska verktyg och metoder</h3>
-        <ul>
-          <li><a href="https://www.vilarare.se/fritidspedagogik/sa-gor-vi/ida-mari-haller-koll-med-en-kontaktbarometer/">Vi Lärare — Kontaktbarometern</a></li>
-          <li><a href="https://interactcom.se/nohra">InterACT — NÖHRA-modellen</a></li>
-          <li><a href="https://kraftochbalans.com/nohra-modell-for-samtal/">Kraft &amp; Balans — NÖHRA-modellen för samtal</a></li>
-          <li><a href="https://forskoleforum.se/serier/isbergsmodellen">Förskoleforum — Isbergsmodellen (serie)</a></li>
-          <li><a href="https://forskoleforum.se/amnen/lek-larande-och-omsorg/relationer-och-kommunikation/arbeta-med-isbergsmodellen-mallar-och-exempel">Förskoleforum — Isbergsmodellen mallar och exempel</a></li>
-          <li><a href="https://psykologdavid.se/kursdemo_en_forskola/">David Edfelt — En förskola för var och en</a></li>
-          <li><a href="https://larportalen.skolverket.se/moduler/M118/5">Skolverkets Lärportal — NPF i en tillgänglig förskola</a></li>
-          <li><a href="https://www.nok.se/titlar/laromedel-b1/fore-bornholmsmodellen---spraklekar-i-forskolan/">Natur &amp; Kultur — Före Bornholmsmodellen</a></li>
-          <li><a href="https://bornholmsmodellen.se/material-3/">bornholmsmodellen.se — Material</a></li>
-        </ul>
-
-        <h3>Rapporter och forskning</h3>
-        <ul>
-          <li><a href="https://forskoleforum.se/amnen/organisation/kvalitet-och-dokumentation/ratt-start-i-livet-sa-lyfter-vi-svensk-forskola">Förskoleforum — Eidevalds rapport: Rätt start i livet</a></li>
-          <li><a href="https://www.svensktnaringsliv.se/sakomraden/utbildning/ratt-start-i-livet-sa-lyfter-vi-svensk-forskola_1242996.html">Svenskt Näringsliv — Rätt start i livet (rapport)</a></li>
-        </ul>
-
-        <h3>Förändringsledning</h3>
-        <ul>
-          <li><a href="https://www.prosci.com/blog/adkar-vs-kotter">Prosci — ADKAR vs Kotter</a></li>
-          <li><a href="https://vdtidningen.se/kotters-8-stegsmodell-for-forandring/">VD-tidningen — Kotters 8-stegsmodell</a></li>
-        </ul>
-
-        <h3>AI för skolledare</h3>
-        <ul>
-          <li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices">Anthropic — Claude prompting best practices</a></li>
-          <li><a href="https://www.skolledare.se/blandade-artiklar/sekretess-och-ai-i-skolan">Skolledare.se — Sekretess och AI i skolan</a></li>
-        </ul>
+      <div class="quicklinks">
+        <a href="javascript:window.print()">Skriv ut hela landningen</a>
+        <a href="till-maria.md">Mailmall till Maria</a>
+        <a href="README.md">Om sajten</a>
       </div>
     </div>
   </section>
@@ -974,38 +215,34 @@ NÄR JAG STÄLLER FRÅGA
   <div class="site-footer__inner">
     <div>
       <h4>Mariaskarta</h4>
-      <p>Ett digitalt navigationsverktyg för biträdande förskolechef Maria Blixt Ekström. Processkarta, årshjul, kommunikationsplan och AI-verktyg för likvärdig och inkluderande utbildning i förskolan.</p>
-      <p style="margin-top:0.5em">Byggt med utgångspunkt i Marias egna anteckningar och vision. Fri att vidareutveckla.</p>
+      <p>Ett digitalt navigationsverktyg för biträdande förskolechef Maria Blixt Ekström. Processkarta, årshjul, kommunikationsplan, mallar och AI-verktyg för likvärdig och inkluderande utbildning i förskolan.</p>
+      <p style="margin-top:0.5em">Vision: <em>"Alla barn ska känna tilltro till sin förmåga som en lärande individ."</em></p>
     </div>
     <div>
-      <h4>Sektioner</h4>
+      <h4>Innehåll</h4>
       <ul>
-        <li><a href="#oversikt">Översikt</a></li>
-        <li><a href="#aha">Helheten på en bild</a></li>
-        <li><a href="#processkarta">Processkarta</a></li>
-        <li><a href="#berattelse">Berättelsen</a></li>
-        <li><a href="#arshjul">Årshjul</a></li>
-        <li><a href="#kommunikation">Kommunikationsplan</a></li>
-        <li><a href="#verktygslada">Verktygslåda</a></li>
-        <li><a href="#promptar">AI-promptar</a></li>
-        <li><a href="#kallor">Källor</a></li>
+        <li><a href="karta.html">Processkartan</a></li>
+        <li><a href="berattelse.html">Berättelsen</a></li>
+        <li><a href="arshjul.html">Årshjulet</a></li>
+        <li><a href="kommunikation.html">Kommunikationsplan</a></li>
+        <li><a href="verktyg.html">Verktygslådan</a></li>
+        <li><a href="mallar/index.html">Mallarna</a></li>
+        <li><a href="promptar.html">AI-promptarna</a></li>
+        <li><a href="kallor.html">Källor</a></li>
       </ul>
     </div>
     <div>
-      <h4>Utskrivbara mallar</h4>
+      <h4>Snabblänkar</h4>
       <ul>
-        <li><a href="mallar/index.html">Alla mallar</a></li>
-        <li><a href="mallar/pedagogisk-avstamning.html">Pedagogisk avstämning</a></li>
-        <li><a href="mallar/isbergsmodellen.html">Isbergsmodellen</a></li>
-        <li><a href="mallar/kontaktbarometer.html">Kontaktbarometer</a></li>
-        <li><a href="mallar/nohra-samtal.html">NÖHRA-samtal</a></li>
-        <li><a href="javascript:window.print()">Skriv ut hela sajten</a></li>
+        <li><a href="javascript:window.print()">Skriv ut som PDF</a></li>
+        <li><a href="https://claude.ai/projects">Skapa Claude Project</a></li>
+        <li><a href="https://mermaid.live/">Redigera i Mermaid Live</a></li>
+        <li><a href="https://draw.io">Importera till draw.io</a></li>
       </ul>
     </div>
   </div>
 </footer>
 
-<script src="assets/mermaid.min.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>

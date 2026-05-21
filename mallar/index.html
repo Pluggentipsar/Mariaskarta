@@ -3,11 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mallar — Mariaskarta</title>
+  <title>Mallar — färdiga att fylla i · Mariaskarta</title>
+  <meta name="description" content="Fyra utskrivbara A4-mallar för svensk förskola: pedagogisk avstämning, Isbergsmodellen, Kontaktbarometer, NÖHRA-samtalsguide.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../assets/styles.css">
+
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231B4B7A'/%3E%3Cpath d='M32 6a26 26 0 0 1 22 12L32 32V6z' fill='%234A7C59'/%3E%3Cpath d='M32 32l22-14a26 26 0 0 1 4 14H32z' fill='%23E27D60'/%3E%3Cpath d='M32 32h26a26 26 0 0 1-26 26V32z' fill='%236B4E8C'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -18,28 +22,40 @@
       <span class="site-header__brand-mark" aria-hidden="true"></span>
       Mariaskarta
     </a>
-    <nav class="site-nav" aria-label="Huvudnavigation">
-      <a href="../index.html#oversikt">Översikt</a>
-      <a href="../index.html#processkarta">Processkarta</a>
-      <a href="../index.html#arshjul">Årshjul</a>
-      <a href="../index.html#kommunikation">Kommunikation</a>
-      <a href="../index.html#verktygslada">Verktygslåda</a>
-      <a href="index.html" style="color: var(--color-primary); border-bottom-color: var(--color-accent);">Mallar</a>
-      <a href="../index.html#promptar">AI-promptar</a>
+    <button class="site-nav__toggle" aria-expanded="false" aria-controls="primary-nav" type="button">Meny</button>
+    <nav class="site-nav" id="primary-nav" aria-label="Huvudnavigation">
+      <a href="../karta.html">Karta</a>
+      <a href="../berattelse.html">Berättelse</a>
+      <a href="../arshjul.html">Årshjul</a>
+      <a href="index.html" aria-current="page">Mallar</a>
+      <a href="../verktyg.html">Verktyg</a>
+      <a href="../kommunikation.html">Kommunikation</a>
+      <a href="../promptar.html">AI</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="hero" style="padding: 4rem 0 2rem;">
-    <div class="container">
-      <span class="hero__kicker">Utskrivbara mallar · A4</span>
-      <h1 class="hero__title" style="font-size: clamp(2rem, 5vw, 3rem);">Mallar — färdiga att fylla i.</h1>
-      <p class="hero__lead">
+
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <ol class="breadcrumb">
+        <li><a href="../index.html">Hem</a></li>
+        <li aria-current="page">Mallar</li>
+      </ol>
+      <h1>Mallar — färdiga att fylla i.</h1>
+      <p class="page-hero__lead">
         Fyra utskrivbara A4-mallar som motsvarar processens centrala artefakter. Öppna i webbläsare, fyll i digitalt eller skriv ut. Varje mall har en knapp för "Skriv ut / spara som PDF" uppe i högra hörnet.
       </p>
     </div>
   </section>
+
+  <div class="purpose-strip">
+    <div class="purpose-strip__inner">
+      <span class="purpose-strip__label">Använd när</span>
+      <p class="purpose-strip__text">… du eller en kollega behöver ett konkret formulär — på papper eller digitalt — för en pedagogisk avstämning, isbergsanalys, kontaktbarometer eller ett NÖHRA-samtal.</p>
+    </div>
+  </div>
 
   <section class="section">
     <div class="container">
@@ -78,23 +94,39 @@
       <div class="callout" style="margin-top: 2.5rem;">
         <strong>Användning:</strong> Alla mallar är optimerade för A4 portrait. Tryck på den blå "Skriv ut"-knappen i en mall för att spara som PDF eller skicka till skrivare. Mallarna fungerar lika bra digitalt (fyll i, ta skärmdump) som på papper.
       </div>
+
+      <nav class="pager" aria-label="Sidnavigering">
+        <a class="pager__item pager__item--prev" href="../arshjul.html">
+          <span class="pager__direction">Föregående</span>
+          <span class="pager__title">Årshjulet</span>
+        </a>
+        <a class="pager__item pager__item--next" href="../verktyg.html">
+          <span class="pager__direction">Nästa</span>
+          <span class="pager__title">Verktygslådan</span>
+        </a>
+      </nav>
     </div>
   </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="site-footer__inner">
     <div>
       <h4>Mariaskarta</h4>
-      <p>Mallar för processen för stöd till arbetslag i förskolan. Fri att modifiera och vidareutveckla.</p>
+      <p>Ett digitalt navigationsverktyg för biträdande förskolechef. <a href="../index.html">Tillbaka till start</a>.</p>
     </div>
     <div>
-      <h4>Tillbaka till sajten</h4>
+      <h4>Innehåll</h4>
       <ul>
-        <li><a href="../index.html#oversikt">Översikt</a></li>
-        <li><a href="../index.html#processkarta">Processkartan</a></li>
-        <li><a href="../index.html#arshjul">Årshjulet</a></li>
-        <li><a href="../index.html#verktygslada">Verktygslådan</a></li>
+        <li><a href="../karta.html">Processkartan</a></li>
+        <li><a href="../berattelse.html">Berättelsen</a></li>
+        <li><a href="../arshjul.html">Årshjulet</a></li>
+        <li><a href="../kommunikation.html">Kommunikationsplan</a></li>
+        <li><a href="../verktyg.html">Verktygslådan</a></li>
+        <li><a href="index.html">Mallarna</a></li>
+        <li><a href="../promptar.html">AI-promptarna</a></li>
+        <li><a href="../kallor.html">Källor</a></li>
       </ul>
     </div>
     <div>
