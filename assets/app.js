@@ -62,6 +62,82 @@
   }
 
   // ----------------------------------------------------------
+  // 2b. Dropdown-meny i nav + auto-active baserat på sidan
+  // ----------------------------------------------------------
+  function setupDropdownNav() {
+    // Identifiera aktuell sida
+    const path = window.location.pathname;
+    const fileName = (path.split("/").pop() || "index.html");
+    const inMallarDir = path.includes("/mallar/");
+
+    // Sätt aria-current på matchande nav-länk
+    document.querySelectorAll(".site-nav a[href], .site-nav__menu a[href]").forEach(link => {
+      const href = link.getAttribute("href");
+      const linkFile = href.split("/").pop();
+      const linkInMallar = href.includes("mallar/");
+      // Matchning: samma filnamn OCH samma katalog-kontext
+      if (linkFile === fileName && linkInMallar === inMallarDir) {
+        link.setAttribute("aria-current", "page");
+      }
+    });
+
+    // Markera dropdown-triggern som aktiv om aktuell sida ligger inom dess undermeny
+    document.querySelectorAll(".site-nav__group").forEach(group => {
+      const trigger = group.querySelector(".site-nav__trigger");
+      const menu = group.querySelector(".site-nav__menu");
+      if (!trigger || !menu) return;
+      if (menu.querySelector('a[aria-current="page"]')) {
+        trigger.classList.add("is-current-section");
+      }
+    });
+
+    // Dropdown-toggle
+    const triggers = document.querySelectorAll(".site-nav__trigger");
+    triggers.forEach(trigger => {
+      const menuId = trigger.getAttribute("aria-controls");
+      const menu = document.getElementById(menuId);
+      if (!menu) return;
+      trigger.addEventListener("click", e => {
+        e.stopPropagation();
+        const isOpen = trigger.getAttribute("aria-expanded") === "true";
+        // Stäng alla först
+        triggers.forEach(t => {
+          t.setAttribute("aria-expanded", "false");
+          const m = document.getElementById(t.getAttribute("aria-controls"));
+          if (m) m.hidden = true;
+        });
+        if (!isOpen) {
+          trigger.setAttribute("aria-expanded", "true");
+          menu.hidden = false;
+        }
+      });
+    });
+
+    // Stäng vid klick utanför
+    document.addEventListener("click", e => {
+      if (e.target.closest(".site-nav__menu") || e.target.closest(".site-nav__trigger")) return;
+      triggers.forEach(t => {
+        t.setAttribute("aria-expanded", "false");
+        const m = document.getElementById(t.getAttribute("aria-controls"));
+        if (m) m.hidden = true;
+      });
+    });
+
+    // Stäng vid Esc
+    document.addEventListener("keydown", e => {
+      if (e.key !== "Escape") return;
+      triggers.forEach(t => {
+        if (t.getAttribute("aria-expanded") === "true") {
+          t.setAttribute("aria-expanded", "false");
+          const m = document.getElementById(t.getAttribute("aria-controls"));
+          if (m) m.hidden = true;
+          t.focus();
+        }
+      });
+    });
+  }
+
+  // ----------------------------------------------------------
   // 3. Årshjulet
   // ----------------------------------------------------------
   const months = [
@@ -391,6 +467,7 @@
   // 5. Boot
   // ----------------------------------------------------------
   function init() {
+    setupDropdownNav();
     initMermaid();
     renderYearWheel();
     setupCopyButtons();
